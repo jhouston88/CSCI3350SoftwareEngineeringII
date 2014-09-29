@@ -1,0 +1,54 @@
+create table Category(cat_id INT, category_name VARCHAR(25));
+
+insert into Category(cat_id, category_name) values(1, "Ash");
+insert into Category(cat_id, category_name) values(2, "Cherry");
+insert into Category(cat_id, category_name) values(3, "Magnolia");
+insert into Category(cat_id, category_name) values(4, "Maple");
+insert into Category(cat_id, category_name) values(5, "Oak");
+insert into Category(cat_id, category_name) values(6, "Walnut");
+insert into Category(cat_id, category_name) values(7, "Douglas-fir");
+insert into Category(cat_id, category_name) values(8, "Hemlock");
+insert into Category(cat_id, category_name) values(9, "Pine");
+insert into Category(cat_id, category_name) values(10, "Cedar");
+
+
+
+create table Wood(tree_id INT, tree_name VARCHAR(25), description TEXT,
+		sp_gravity_green SMALLINT, sp_gravity_12pct SMALLINT,
+		cat_id INT);
+insert into Wood(tree_id, tree_name, description, sp_gravity_green, sp_gravity_12pct, cat_id)
+	           values(1, "White", "Important species of the white ash group are American whiteash 
+	                      (Fraxinus americana), green ash (F. pennsylvanica), blue ash (F. quadrangulata),
+                                      and Oregon ash (F. latifolia). The first three species grow in the eastern half of the United States. Oregon 
+                                      ash grows along the Pacific Coast. The heartwood of the white ash group is brown, and the sapwood is 
+                                      light-colored or nearly white. Second-growth trees are particularly sought after because of the inherent 
+                                      qualities of the wood from these trees: it is heavy, strong, hard, and stiff, and it has high resistance to shock. 
+                                      Oregon ash has somewhat lower strength properties than American white ash, but it is used for similar purposes 
+                                      on the West Coast. American white ash is used principally for nonstriking tool handles, oars, baseball bats, and other
+                                      sporting and athletic goods. For handles of the best grade, some handle specifications call for not less than 2 nor more 
+                                      than 7 growth rings per centimeter (not less than 5 nor more than 17 growth rings per inch). The additional weight requirement 
+                                      of 690 kg/m3 (43 lb/ft3) or more at 12% moisture content ensures high quality material. Principal uses for the white ash
+                                      group are decorative veneer, cabinets, furniture, flooring, millwork, and crates.",
+                                      0.55,0.66,1);
+insert into Wood(tree_id, tree_name, description, sp_gravity_green, sp_gravity_12pct, cat_id)
+                           values(2, "Black", "Black cherry (Prunus serotina) is sometimes known as cherry, wild black cherry, and wild cherry. It is the only native 
+                                      species of the genus Prunus of commercial importance for lumber production. Black cherry is found from southeastern Canada 
+                                      throughout the eastern half of the United States. Production is centered chiefly in the Middle Atlantic States. The heartwood of 
+                                     black cherry varies from light to dark reddish brown and has a distinctive luster. The nearly white sapwood is narrow in old-growth 
+                                     trees and wider in second growth trees. The wood has a fairly uniform texture and very good machining properties. It is moderately 
+                                     heavy, strong, stiff, and moderately hard; it has high shock resistance and moderately high shrinkage. Black cherry is very dimensionally 
+                                     stable after drying. Black cherry is used principally for furniture, fine veneer panels, and architectural woodwork. Other uses include burial 
+                                     caskets, wooden ware, novelties, patterns, and paneling.",
+                                     0.47,0.50,2);
+insert into Wood(tree_id, tree_name, description, sp_gravity_green, sp_gravity_12pct, cat_id)
+                           values(3, "Cucumber", "	Commercial magnolia consists of three species: southern magnolia (Magnolia grandiflora), sweetbay (M. virginiana), and 
+                                      cucumbertree (M. acuminata). Other names for southern magnolia are evergreen magnolia, big laurel, bull bay, and laurel bay. Sweetbay is 
+                                      sometimes called swamp magnolia. The lumber produced by all three species is simply called magnolia. The natural range of sweetbay extends 
+                                      along the Atlantic and Gulf Coasts from Long Island to Texas, and that of southern magnolia extends from North Carolina to Texas. Cucumbertree 
+                                      grows from the Appalachians to the Ozarks northward to Ohio. Louisiana leads in the production of magnolia lumber. Sapwood of southern magnolia 
+                                      is yellowish white, and heartwood is light to dark brown with a tinge of yellow or green. The wood, which has close, uniform texture and is generally 
+                                      straight grained, closely resembles yellow-poplar (Liriodendron tulipifera). It is moderately heavy, moderately low in shrinkage, moderately low in bending 
+                                      and compressive strength, moderately hard and stiff, and moderately high in shock resistance. Sweet bay is much like southern magnolia. The wood of cucumber 
+                                      tree is similar to that of yellow poplar (L.tulipifera); cucumber tree that grows in the yellow poplar range is not separated from that species on the market. Magnolia 
+                                      lumber is used principally in the manufacture of furniture, boxes, pallets, venetian blinds, sashes, doors, veneer, and millwork.",
+                                      0.44, 0.48, 3);
