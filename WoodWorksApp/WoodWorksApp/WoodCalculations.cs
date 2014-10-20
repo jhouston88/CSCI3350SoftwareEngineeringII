@@ -70,9 +70,11 @@ namespace WoodWorksApp
             Gm = (Gb / (1 - 0.265 * a * Gb));
             // calculates p
             p = 62.4 * Gm * (1 + M / 100);
+            // returns the density
             return p;
         }
-
+        
+        // Method used for the density calculation
         public enum Gravity
         {
             GREEN, TWELVEPCT
