@@ -19,22 +19,22 @@ namespace WoodWorks
             Application.Run(new Form1());
         }
 
-        public class Wood
+        public class WoodCalculations
         {
-            public string Name { public get; private set; }
-            public string Category { public get; private set; }
-            public double Moisture { public get; private set; }
-            public string Description { public get; private set; }
-            public int BeamWidith { public get; private set; }
-            public int BeamDepth { public get; private set; }
-            public int BeamLoad { public get; private set; }
-            public int BeamSpan { public get; private set; }
-            public string CategoryName { public get; private set; }
-            public string TreeName { public get; private set; }
-            public int SpGravityGreen { public get; private set; }
-            public int SpGravity12Pct { public get; private set; }
-            public int CoeffDimChgTang { public get; private set; }
-            public int CoeffDimChgRadial { public get; private set; }
+            public string Name {  get; set; }
+            public string Category {  get;  set; }
+            public double Moisture {  get;  set; }
+            public string Description {  get;  set; }
+            public int BeamWidith {  get;  set; }
+            public int BeamDepth {  get;  set; }
+            public int BeamLoad {  get;  set; }
+            public int BeamSpan {  get;  set; }
+            public string CategoryName {  get;  set; }
+            public string TreeName {  get;  set; }
+            public int SpGravityGreen {  get;  set; }
+            public int SpGravity12Pct {  get;  set; }
+            public int CoeffDimChgTang {  get;  set; }
+            public int CoeffDimChgRadial {  get;  set; }
 
 
             public double calculateBeamDeflection()
