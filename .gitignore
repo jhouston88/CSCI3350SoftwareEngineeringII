@@ -213,3 +213,6 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+WoodWorksApp/packages/sqlite-net.1.0.8/content/SQLite.cs
+WoodWorksApp/packages/sqlite-net.1.0.8/content/SQLiteAsync.cs
+WoodWorksApp/packages/sqlite-net.1.0.8/sqlite-net.1.0.8.nupkg
