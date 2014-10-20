@@ -49,11 +49,33 @@ namespace WoodWorksApp
             RADIAL, TANGENTIAL     
 	    }
 
-        public double calculateDensityAtMositureContent()
+        public static double calculateDensityAtMositureContent(Wood wood, double specifiedM, Gravity gravity)
         {
-            double value = 0;
+            // Three steps to get the density
+            // First, calculates the a via using a = (30 - M) / 30 where M is determined by the user and its default value is 20
+            // Second, calculates the Gm via using Gm = (Gb / (1 - 0.265 * a * Gb)). 
+            // For this step, there are two conditions, one is green and another is 12% moisture content.
+            // The condition will be decided by the user.
+            // Third, calculates the p via using p = 62.4 * Gm * (1 + M / 100)
+            double M = 20, a = 0, Gb = wood.SpGravityGreen, Gm = 0, p = 0;
 
-            return value;
+            // gets the value of M
+            M = specifiedM;
+            // calculates a
+            a = (30 - M) / 30;
+            // changes the value of Gb if the condition is 12% moisture content
+            if (gravity == Gravity.TWELVEPCT)
+                Gb = wood.SpGravity12Pct;
+            // calculates Gm
+            Gm = (Gb / (1 - 0.265 * a * Gb));
+            // calculates p
+            p = 62.4 * Gm * (1 + M / 100);
+            return p;
+        }
+
+        public enum Gravity
+        {
+            GREEN, TWELVEPCT
         }
     }
 }
