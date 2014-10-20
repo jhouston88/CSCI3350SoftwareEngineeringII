@@ -23,7 +23,7 @@ namespace WoodWorksApp
         /// <param name="wood">The Wood object to perform the calculations upon</param>
         /// <param name="width">The width of the wood</param>
         /// <param name="direction">Radial or tangential direction of the wood</param>
-        /// <returns>The change in dimension divided by the initial dimension - percent change</returns>
+        /// <returns>The change in dimension when moisture content changes from 0% to 100%</returns>
         public static double calculateDimensionalChange(Wood wood, double width, Direction direction)
         {
             // Follows the formula deltaD = Di * (C * (Mf - Mi)) where deltaD is change in dimension,
@@ -37,8 +37,8 @@ namespace WoodWorksApp
             if (direction == Direction.RADIAL)                              // but if we're not, switch to coefficent for radial direction
                 coefficientForDimensioalChange = wood.CoeffDimChgRadial;    
             
-            // calculate deltaD and return deltaD/Di (see formula in previous comment)
-            return (width * (coefficientForDimensioalChange * (finalMoistureContent - initialMoistureContent))); // / width;
+            // calculate deltaD and return deltaD (see formula in previous comment)
+            return width * (coefficientForDimensioalChange * (finalMoistureContent - initialMoistureContent));
         }
 
         /// <summary>
