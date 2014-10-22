@@ -15,7 +15,6 @@ namespace WoodWorksApp
     {
         // Instantiate class objects 
         private DatabaseConnection dbConn = new DatabaseConnection();
-        private WoodCalculations woodCalc = new WoodCalculations();
         private Category category = new Category();
         private Wood wood = new Wood(); 
 
