@@ -66,46 +66,6 @@ namespace WoodWorksApp
         }
 
 
-        private void getTreesInCategory()
-        {
-            //SQLiteConnection sqliteCon = new SQLiteConnection(dbConn.ConnectionString);
-            //try
-            //{
-            //    // Get the current selected item in the Category List Box
-            //    string curCategory = catListBox.SelectedItem.ToString();
-
-            //    // Query the database to select the tree name that matches the selected
-            //    string query = "SELECT tree_name FROM Wood"
-            //                    + "JOIN Category USING(cat_id)"
-            //                    + "WHERE category_name = " + curCategory + ";";
-
-            //    // Passes the query and connection to the helper class
-            //    SQLiteCommand createCommand = new SQLiteCommand(query, sqliteCon);
-
-            //    // Helper class reads the data from database 
-            //    SQLiteDataReader dr = createCommand.ExecuteReader();
-
-            //    // While loops that readers the data from the data base and stores it in the CatName property
-            //    while (dr.Read())
-            //    {
-            //        wood.TreeName = dr.GetString(0);
-            //        speciesListBox.Items.Add(wood.TreeName);
-            //    }
-            //    // Closes the database connection
-            //    sqliteCon.Close();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
-
-        }
-
-        //public Wood getWood()
-        //{
-        //    return wood;
-        //}
-
         private void catListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SQLiteConnection sqliteCon = new SQLiteConnection(dbConn.ConnectionString);
@@ -134,7 +94,7 @@ namespace WoodWorksApp
 
             try
             {
-                descripListBox.Items.Clear();
+                descripListBox.Text = "";
                 speciesListBox.Items.Clear();
                 sqliteCon.Open();
                 dr = createCommand.ExecuteReader();
@@ -178,14 +138,14 @@ namespace WoodWorksApp
             SQLiteDataReader dr;
             try
             {
-                descripListBox.Items.Clear();
+                descripListBox.Text = ""; 
                 sqliteCon.Open();
                 dr = createCommand.ExecuteReader();
                 // While loops that readers the data from the data base and stores it in the CatName property
                 while (dr.Read())
                 {
                     wood.Description = dr.GetString(0);
-                    descripListBox.Items.Add(wood.Description);
+                    descripListBox.Text = wood.Description;
 
                 }
                 // Closes the database connection

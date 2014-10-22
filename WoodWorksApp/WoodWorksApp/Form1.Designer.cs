@@ -30,7 +30,6 @@
         {
             this.catListBox = new System.Windows.Forms.ListBox();
             this.speciesListBox = new System.Windows.Forms.ListBox();
-            this.descripListBox = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.descripListBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -63,15 +63,6 @@
             this.speciesListBox.Size = new System.Drawing.Size(165, 251);
             this.speciesListBox.TabIndex = 1;
             this.speciesListBox.SelectedIndexChanged += new System.EventHandler(this.speciesListBox_SelectedIndexChanged);
-            // 
-            // descripListBox
-            // 
-            this.descripListBox.FormattingEnabled = true;
-            this.descripListBox.Location = new System.Drawing.Point(420, 53);
-            this.descripListBox.Name = "descripListBox";
-            this.descripListBox.Size = new System.Drawing.Size(162, 251);
-            this.descripListBox.TabIndex = 2;
-            this.descripListBox.SelectedIndexChanged += new System.EventHandler(this.descripListBox_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -172,11 +163,22 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
             // 
+            // descripListBox
+            // 
+            this.descripListBox.Location = new System.Drawing.Point(420, 53);
+            this.descripListBox.Multiline = true;
+            this.descripListBox.Name = "descripListBox";
+            this.descripListBox.ReadOnly = true;
+            this.descripListBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.descripListBox.Size = new System.Drawing.Size(180, 251);
+            this.descripListBox.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(881, 458);
+            this.Controls.Add(this.descripListBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox1);
@@ -185,7 +187,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.descripListBox);
             this.Controls.Add(this.speciesListBox);
             this.Controls.Add(this.catListBox);
             this.Controls.Add(this.menuStrip1);
@@ -205,7 +206,6 @@
 
         private System.Windows.Forms.ListBox catListBox;
         private System.Windows.Forms.ListBox speciesListBox;
-        private System.Windows.Forms.ListBox descripListBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -217,6 +217,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.TextBox descripListBox;
     }
 }
 
