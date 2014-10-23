@@ -15,8 +15,8 @@ namespace WoodWorksApp
     {
         // Instantiate class objects 
         private DatabaseConnection dbConn = new DatabaseConnection();
-        private Category category = new Category();
-        private Wood wood = new Wood(); 
+        private Category category;
+        private Wood wood;
 
 
         public Form1()
@@ -41,7 +41,7 @@ namespace WoodWorksApp
                 sqliteCon.Open();
 
                 // Querys the category name from the Category table
-                string query = "SELECT category_name FROM Category;";
+                string query = "SELECT * FROM Category;";
 
                 // Passes the query and connection to the helper class
                 SQLiteCommand createCommand = new SQLiteCommand(query, sqliteCon);
@@ -52,7 +52,7 @@ namespace WoodWorksApp
                 // While loops that readers the data from the data base and stores it in the CatName property
                 while (dr.Read())
                 {
-                    category.CatName = dr.GetString(0);
+                    category = new Category(dr.GetInt32(0), dr.GetString(1));
                     catListBox.Items.Add(category.CatName);
                 }
                 // Closes the database connection
@@ -68,22 +68,18 @@ namespace WoodWorksApp
         private void catListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SQLiteConnection sqliteCon = new SQLiteConnection(dbConn.ConnectionString);
+
+            if (catListBox.SelectedItem == null)
+            {
+                return;
+            }
             // Get the current selected item in the Category List Box
             string curCategory = "";
-            if (catListBox == null)
-            {
-                catListBox.Items.Add("List box is empty");
-            }
-            else if (catListBox.SelectedItem.Equals(null))
-            {
-                MessageBox.Show("Please Select an Item from list");
-            }
-            else
-            {
-                curCategory = catListBox.SelectedItem.ToString();
-            }
+
+            curCategory = catListBox.SelectedItem.ToString();
+   
             // Query the database to select the tree name that matches the selected category
-            string query = "SELECT tree_name FROM Wood JOIN Category USING(cat_id) WHERE Category.category_name = '" + curCategory + "';";
+            string query = "SELECT * FROM Wood JOIN Category USING(cat_id) WHERE Category.category_name = '" + curCategory + "';";
 
             // Passes the query and connection to the helper class
             SQLiteCommand createCommand = new SQLiteCommand(query, sqliteCon);
@@ -100,7 +96,7 @@ namespace WoodWorksApp
                 // While loops that readers the data from the data base and stores it in the CatName property
                 while (dr.Read())
                 {
-                    wood.TreeName = dr.GetString(0);
+                    wood = new Wood(dr.GetInt32(0), dr.GetString(1), dr.GetString(2), dr.GetDouble(3), dr.GetDouble(4), dr.GetDouble(5), dr.GetDouble(6), dr.GetDouble(7), dr.GetDouble(8), dr.GetDouble(9), dr.GetDouble(10), dr.GetInt32(11));
                     speciesListBox.Items.Add(wood.TreeName);
                     
                 }
@@ -122,38 +118,14 @@ namespace WoodWorksApp
 
         private void speciesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SQLiteConnection sqliteCon = new SQLiteConnection(dbConn.ConnectionString);
-            // Get the current select item in the Species list box
-            string curSpecies = speciesListBox.SelectedItem.ToString();
-            // Get the current selected item in the Category List Box
-            string curCategory = catListBox.SelectedItem.ToString();
-            // Query the database to select the description that matches the selected species
-            string query = "SELECT description FROM Wood JOIN Category USING(cat_id) WHERE tree_name = '" + curSpecies + "' AND category_name = '" + curCategory + "';";
-
-            // Passes the query and connection to the helper class
-            SQLiteCommand createCommand = new SQLiteCommand(query, sqliteCon);
-
-            // Helper class reads the data from database 
-            SQLiteDataReader dr;
-            try
+            // Ensures that a item from the list box is selected instead of white space
+            if (speciesListBox.SelectedItem == null)
             {
-                descripListBox.Text = ""; 
-                sqliteCon.Open();
-                dr = createCommand.ExecuteReader();
-                // While loops that readers the data from the data base and stores it in the CatName property
-                while (dr.Read())
-                {
-                    wood.Description = dr.GetString(0);
-                    descripListBox.Text = wood.Description;
-
-                }
-                // Closes the database connection
-                sqliteCon.Close();
+                return;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                // Add the description of the selected wood to the discription list box
+                descripListBox.Text = wood.Description;
+
             }
         }
     }
-}

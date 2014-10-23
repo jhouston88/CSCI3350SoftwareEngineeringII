@@ -15,7 +15,6 @@ namespace WoodWorksApp
         public string ConnectionString { get { return connectionString; } }
 
         Wood wood = new Wood();
-        Category category = new Category(); 
 
         public void openDatabaseConnection()
         {
@@ -47,5 +46,6 @@ namespace WoodWorksApp
             }
         }
 
+        
     }
 }

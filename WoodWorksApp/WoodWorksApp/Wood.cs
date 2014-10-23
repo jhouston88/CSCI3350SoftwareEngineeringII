@@ -8,18 +8,18 @@ namespace WoodWorksApp
 {
     class Wood
     {
-        public int TreeId { get; set; }
-        public string TreeName { get; set; }
-        public string Description { get; set; }
-        public double SpGravityGreen { get; set; }
-        public double SpGravity12Pct { get; set; }
-        public double CoeffDimChgTang { get; set; }
-        public double CoeffDimChgRadial { get; set; }
-        public double ElastGreen { get; set; }
-        public double Elast12Pct { get; set; }
-        public double BeamShearFlat { get; set; }
-        public double BeamShearEdge { get; set; }
-        public int CatId { get; set; }
+        public int TreeId {  get; private set; }
+        public string TreeName { get; private set; }
+        public string Description { get; private set; }
+        public double SpGravityGreen { get; private set; }
+        public double SpGravity12Pct { get; private set; }
+        public double CoeffDimChgTang { get; private set; }
+        public double CoeffDimChgRadial { get; private set; }
+        public double ElastGreen { get; private set; }
+        public double Elast12Pct { get; private set; }
+        public double BeamShearFlat { get; private set; }
+        public double BeamShearEdge { get; private set; }
+        public int CatId { get; private set; }
 
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace WoodWorksApp
         /// <param name="width">The width of the wood</param>
         /// <param name="direction">Radial or tangential direction of the wood</param>
         /// <returns>The change in dimension when moisture content changes from 0% to 100%</returns>
-        public static double calculateDimensionalChange(Wood wood, double width, Direction direction)
+        public double calculateDimensionalChange(Wood wood, double width, Direction direction)
         {
             // Follows the formula deltaD = Di * (C * (Mf - Mi)) where deltaD is change in dimension,
             //      Di is initial dimension (width), C is the coefficient for dimensional change, which
@@ -103,7 +103,7 @@ namespace WoodWorksApp
             RADIAL, TANGENTIAL
         }
 
-        public static double calculateDensityAtMositureContent(Wood wood, double specifiedM, Gravity gravity)
+        public double calculateDensityAtMositureContent(Wood wood, double specifiedM, Gravity gravity)
         {
             // Three steps to get the density
             // First, calculates the a via using a = (30 - M) / 30 where M is determined by the user and its default value is 20

@@ -8,12 +8,16 @@ namespace WoodWorksApp
 {
     class Category
     {
-        public int CatId { get; set; }
-        public string CatName { get; set; }
+        public int CatId { get; private set; }
+        public string CatName { get; private set; }
 
-        public Category()
+        public Category(int CatId, string CatName)
         {
+            this.CatId = CatId;
+            this.CatName = CatName;
         }
+
+
 
     }
 }
