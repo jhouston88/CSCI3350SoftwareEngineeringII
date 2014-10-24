@@ -63,10 +63,19 @@ namespace WoodWorksApp
             this.CatId = CatId;
         }
 
+        /// <summary>
+        /// Calculates the beam deflection of a specified width, depth, span, and weight load of wood.
+        /// </summary>
+        /// <param name="beamWidth">Width of the wood beam</param>
+        /// <param name="beamDepth">Depth of the wood beam</param>
+        /// <param name="beamLoad">Load in pounds (lbs) on top of the wood beam</param>
+        /// <param name="beamSpan">Span of the wood beam</param>
+        /// <param name="elasticityIs12Pct">Specifies if the modulus of elasticity being used is 12 percent or green</param>
+        /// <param name="beamShearIsFlat">Specifies if the beam shear in question is flat or edge</param>
+        /// <returns>The change in dimension when moisture content changes from 0% to 100%</returns>
         public double calculateBeamDeflection(double beamWidth, double beamDepth, double beamLoad, double beamSpan, bool elasticityIs12Pct, bool beamShearIsFlat)
         {
-            // Currently missing BeamShearRatio and ModulusOfElasticity
-           	//KB and KS constants
+            //KB and KS constants
 			const double KB = 0.020833333333;	// 1/48
 			const double KS = 0.25;				// 1/4
 		
@@ -94,7 +103,6 @@ namespace WoodWorksApp
             else
                 beamShear = BeamShearEdge * elasticity;
 				
-            
 			//Calculate beam deflection
 			// beamDeflection = ((( KB * W * L^3 ) / (E * I )) + (( KS * W * L) / ( G * A` )))
             return (((KB * beamLoad * Math.Pow(beamSpan, 3)) / (elasticity * inertia)) +
