@@ -63,11 +63,42 @@ namespace WoodWorksApp
             this.CatId = CatId;
         }
 
-        public double calculateBeamDeflection()
+        public double calculateBeamDeflection(double beamWidth, double beamDepth, double beamLoad, double beamSpan, bool elasticityIs12Pct, bool beamShearIsFlat)
         {
-            double value = 0;
-
-            return value;
+            // Currently missing BeamShearRatio and ModulusOfElasticity
+           	//KB and KS constants
+			const double KB = 0.020833333333;	// 1/48
+			const double KS = 0.25;				// 1/4
+		
+			//Calculate beam moment of inertia
+			// I = (b * h^3) / 12
+			double inertia = (beamWidth * Math.Pow(beamDepth,3) / 12);
+				
+			//Calculate the modified beam area
+			// A` = 5/6 * b * h				
+			double area = 5 / 6 * beamWidth * beamDepth;
+				
+			//Calculate elasticity
+			// E = ModulusOfElasticity * 110%
+            double elasticity;
+            if(elasticityIs12Pct)
+			    elasticity = Elast12Pct * 1.10;
+            else
+                elasticity = ElastGreen * 1.10;
+				
+			//Calculate beam shear
+			// beamShear/EL = BeamShearRatio
+            double beamShear;
+			if (beamShearIsFlat)
+                beamShear = BeamShearFlat * elasticity;
+            else
+                beamShear = BeamShearEdge * elasticity;
+				
+            
+			//Calculate beam deflection
+			// beamDeflection = ((( KB * W * L^3 ) / (E * I )) + (( KS * W * L) / ( G * A` )))
+            return (((KB * beamLoad * Math.Pow(beamSpan, 3)) / (elasticity * inertia)) +
+					((KS * beamLoad * beamSpan)   / (beamShear / area)));
         }
 
         /// <summary>
