@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="calcBeamDeflectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="calcBeamDeflectionForm.Designer.cs">
+      <DependentUpon>calcBeamDeflectionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Category.cs" />
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="DimensionalChangeForm.cs">
@@ -84,6 +90,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Wood.cs" />
+    <EmbeddedResource Include="calcBeamDeflectionForm.resx">
+      <DependentUpon>calcBeamDeflectionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
