@@ -11,12 +11,12 @@ namespace WoodWorksApp
         public int TreeId {  get; private set; }
         public string TreeName { get; private set; }
         public string Description { get; private set; }
-        public double SpGravityGreen { get; private set; }
-        public double SpGravity12Pct { get; private set; }
-        public double CoeffDimChgTang { get; private set; }
-        public double CoeffDimChgRadial { get; private set; }
-        public double ElastGreen { get; private set; }
-        public double Elast12Pct { get; private set; }
+        public double SpecificGravityGreen { get; private set; }
+        public double SpecificGravity12Percent { get; private set; }
+        public double CoefficientDimmensionChangeTangential { get; private set; }
+        public double CoefficientDimmensionChangeRadial { get; private set; }
+        public double ElasticityGreen { get; private set; }
+        public double Elasticity12Percent { get; private set; }
         public double BeamShearFlat { get; private set; }
         public double BeamShearEdge { get; private set; }
         public int CatId { get; private set; }
@@ -52,12 +52,12 @@ namespace WoodWorksApp
             this.TreeId = TreeId;
             this.TreeName = TreeName;
             this.Description = Description;
-            this.SpGravityGreen = SpGravityGreen;
-            this.SpGravity12Pct = SpGravity12Pct;
-            this.CoeffDimChgTang = CoeffDimChgTang;
-            this.CoeffDimChgRadial = CoeffDimChgRadial;
-            this.ElastGreen = ElastGreen;
-            this.Elast12Pct = Elast12Pct;
+            this.SpecificGravityGreen = SpGravityGreen;
+            this.SpecificGravity12Percent = SpGravity12Pct;
+            this.CoefficientDimmensionChangeTangential = CoeffDimChgTang;
+            this.CoefficientDimmensionChangeRadial = CoeffDimChgRadial;
+            this.ElasticityGreen = ElastGreen;
+            this.Elasticity12Percent = Elast12Pct;
             this.BeamShearFlat = BeamShearFlat;
             this.BeamShearEdge = BeamShearEdge;
             this.CatId = CatId;
@@ -91,9 +91,9 @@ namespace WoodWorksApp
 			// E = ModulusOfElasticity * 110%
             double elasticity;
             if(elasticityIs12Pct)
-			    elasticity = Elast12Pct * 1.10;
+			    elasticity = Elasticity12Percent * 1.10;
             else
-                elasticity = ElastGreen * 1.10;
+                elasticity = ElasticityGreen * 1.10;
 				
 			//Calculate beam shear
 			// beamShear/EL = BeamShearRatio
@@ -117,7 +117,7 @@ namespace WoodWorksApp
         /// <param name="width">The width of the wood</param>
         /// <param name="direction">Radial or tangential direction of the wood</param>
         /// <returns>The change in dimension when moisture content changes from 0% to 100%</returns>
-        public double calculateDimensionalChange(Wood wood, double width, Direction direction)
+        public double calculateDimensionalChange(double width, Direction direction)
         {
             // Follows the formula deltaD = Di * (C * (Mf - Mi)) where deltaD is change in dimension,
             //      Di is initial dimension (width), C is the coefficient for dimensional change, which
@@ -126,9 +126,9 @@ namespace WoodWorksApp
 
             const int finalMoistureContent = 100;                           // set to 100% as we want the full range
             const int initialMoistureContent = 0;                           // set to 0% as we want the full range
-            double coefficientForDimensioalChange = wood.CoeffDimChgTang;   // assume we're being passed a tangential direction
+            double coefficientForDimensioalChange = this.CoefficientDimmensionChangeTangential;   // assume we're being passed a tangential direction
             if (direction == Direction.RADIAL)                              // but if we're not, switch to coefficent for radial direction
-                coefficientForDimensioalChange = wood.CoeffDimChgRadial;
+                coefficientForDimensioalChange = this.CoefficientDimmensionChangeRadial;
 
             // calculate deltaD and return deltaD (see formula in previous comment)
             return width * (coefficientForDimensioalChange * (finalMoistureContent - initialMoistureContent));
@@ -142,7 +142,13 @@ namespace WoodWorksApp
             RADIAL, TANGENTIAL
         }
 
-        public double calculateDensityAtMositureContent(Wood wood, double specifiedM, Gravity gravity)
+        /// <summary>
+        /// Calculates the density at a specified moisture
+        /// </summary>
+        /// <param name="specifiedM">The moisture content</param>
+        /// <param name="gravity">The type of gravity</param>
+        /// <returns></returns>
+        public double calculateDensityAtMositureContent(double specifiedM, Gravity gravity)
         {
             // Three steps to get the density
             // First, calculates the a via using a = (30 - M) / 30 where M is determined by the user and its default value is 20
@@ -150,15 +156,15 @@ namespace WoodWorksApp
             // For this step, there are two conditions, one is green and another is 12% moisture content.
             // The condition will be decided by the user.
             // Third, calculates the p via using p = 62.4 * Gm * (1 + M / 100)
-            double M = 20, a = 0, Gb = wood.SpGravityGreen, Gm = 0, p = 0;
+            double M = 20, a = 0, Gb = this.SpecificGravityGreen, Gm = 0, p = 0;
 
             // gets the value of M
             M = specifiedM;
             // calculates a
             a = (30 - M) / 30;
             // changes the value of Gb if the condition is 12% moisture content
-            if (gravity == Gravity.TWELVEPCT)
-                Gb = wood.SpGravity12Pct;
+            if (gravity == Gravity.TWELVEPERCENT)
+                Gb = this.SpecificGravity12Percent;
             // calculates Gm
             Gm = (Gb / (1 - 0.265 * a * Gb));
             // calculates p
@@ -170,7 +176,7 @@ namespace WoodWorksApp
         // Method used for the density calculation
         public enum Gravity
         {
-            GREEN, TWELVEPCT
+            GREEN, TWELVEPERCENT
         }
     }
 }
