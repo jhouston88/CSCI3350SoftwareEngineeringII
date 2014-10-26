@@ -161,7 +161,7 @@
             // 
             // calculateComboBox
             // 
-            this.calculateComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculateComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calculateComboBox.FormattingEnabled = true;
             this.calculateComboBox.Location = new System.Drawing.Point(196, 26);
             this.calculateComboBox.Name = "calculateComboBox";
@@ -172,7 +172,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(131, 31);
+            this.label5.Location = new System.Drawing.Point(133, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 13);
             this.label5.TabIndex = 9;
