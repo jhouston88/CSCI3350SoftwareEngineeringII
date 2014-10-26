@@ -19,5 +19,11 @@ namespace WoodWorksApp
             InitializeComponent();
             this.wood = wood;
         }
+
+        private void DimensionalChangeForm_Load(object sender, EventArgs e)
+        {
+            woodLabel.Text = wood.TreeName + " " + wood.Category.CategoryName;
+        }
+
     }
 }
