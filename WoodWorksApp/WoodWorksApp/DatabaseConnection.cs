@@ -55,13 +55,13 @@ namespace WoodWorksApp
                 SQLiteConnection sqliteCon = new SQLiteConnection(this.connectionString);
                 sqliteCon.Open();
                 // grab all the wood species from the database
-                string query = "SELECT * FROM Wood JOIN Category USING(cat_id) WHERE Category.category_name = '" + category + "';";
+                string query = "SELECT *  FROM Wood JOIN Category USING(cat_id) WHERE Category.category_name = '" + category + "';";
                 SQLiteCommand createCommand = new SQLiteCommand(query, sqliteCon);
                 SQLiteDataReader dr = createCommand.ExecuteReader();
                 // add all the wood species in the database to the woods list
                 while (dr.Read())
                 {
-                    woods.Add(new Wood(dr.GetInt32(0), dr.GetString(1), dr.GetString(2), dr.GetDouble(3), dr.GetDouble(4), dr.GetDouble(5), dr.GetDouble(6), dr.GetDouble(7), dr.GetDouble(8), dr.GetDouble(9), dr.GetDouble(10), dr.GetInt32(11)));
+                    woods.Add(new Wood(dr.GetInt32(0), dr.GetString(1), dr.GetString(2), dr.GetDouble(3), dr.GetDouble(4), dr.GetDouble(5), dr.GetDouble(6), dr.GetDouble(7), dr.GetDouble(8), dr.GetDouble(9), dr.GetDouble(10), new Category(dr.GetInt32(11), dr.GetString(12))));
                 }
                 sqliteCon.Close();
             }

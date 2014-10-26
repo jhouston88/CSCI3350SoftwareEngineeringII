@@ -19,7 +19,7 @@ namespace WoodWorksApp
         public double Elasticity12Percent { get; private set; }
         public double BeamShearFlat { get; private set; }
         public double BeamShearEdge { get; private set; }
-        public int CatId { get; private set; }
+        public Category Category { get; private set; }
 
         /// <summary>
         /// Constructor
@@ -35,11 +35,11 @@ namespace WoodWorksApp
         /// <param name="Elast12Pct">Elasticity at 12% moisture value</param>
         /// <param name="BeamShearFlat">Flat beam shear value</param>
         /// <param name="BeamShearEdge">Edge beam shear value</param>
-        /// <param name="CatId">The category ID in the database</param>
+        /// <param name="Category">The category in the database</param>
         public Wood(int TreeId, string TreeName, string Description, double SpGravityGreen,
                     double SpGravity12Pct, double CoeffDimChgTang, double CoeffDimChgRadial,
                     double ElastGreen, double Elast12Pct, double BeamShearFlat, double BeamShearEdge,
-                    int CatId)
+                    Category Category)
         {
             this.TreeId = TreeId;
             this.TreeName = TreeName;
@@ -52,7 +52,7 @@ namespace WoodWorksApp
             this.Elasticity12Percent = Elast12Pct;
             this.BeamShearFlat = BeamShearFlat;
             this.BeamShearEdge = BeamShearEdge;
-            this.CatId = CatId;
+            this.Category = Category;
         }
 
         /// <summary>
