@@ -6,18 +6,15 @@ using System.Threading.Tasks;
 
 namespace WoodWorksApp
 {
-    class Category
+    public class Category
     {
-        public int CatId { get; private set; }
-        public string CatName { get; private set; }
+        public int CategoryId { get; private set; }
+        public string CategoryName { get; private set; }
 
         public Category(int CatId, string CatName)
         {
-            this.CatId = CatId;
-            this.CatName = CatName;
+            this.CategoryId = CatId;
+            this.CategoryName = CatName;
         }
-
-
-
     }
 }
