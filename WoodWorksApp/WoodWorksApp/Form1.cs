@@ -14,9 +14,10 @@ namespace WoodWorksApp
     public partial class Form1 : Form
     {
         // Instantiate class objects 
-        private DatabaseConnection dbConn = new DatabaseConnection();
-        private Category category;
-        private Wood wood;
+        private DatabaseConnection DBConn = new DatabaseConnection();
+        private List<Category> Categories;
+        private List<Wood> Woods;
+        private Wood Wood;
 
 
         public Form1()
@@ -28,91 +29,41 @@ namespace WoodWorksApp
         private void Form1_Load(object sender, EventArgs e)
         {
             // Populates the catListBox with all of the categories from the DB
-            getCatagories();
-        }
-
-        private void getCatagories()
-        {
-            SQLiteConnection sqliteCon = new SQLiteConnection(dbConn.ConnectionString);
-
             try
             {
-                // Open connection to database
-                sqliteCon.Open();
-
-                // Querys the category name from the Category table
-                string query = "SELECT * FROM Category;";
-
-                // Passes the query and connection to the helper class
-                SQLiteCommand createCommand = new SQLiteCommand(query, sqliteCon);
-
-                // Helper class reads the data from database 
-                SQLiteDataReader dr = createCommand.ExecuteReader();
-
-                // While loops that readers the data from the data base and stores it in the CatName property
-                while (dr.Read())
+                Categories = DBConn.getCategories();
+                foreach (Category category in Categories)
                 {
-                    category = new Category(dr.GetInt32(0), dr.GetString(1));
-                    catListBox.Items.Add(category.CatName);
+                    categoryListBox.Items.Add(category.CatName);
                 }
-                // Closes the database connection
-                sqliteCon.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Could not load categories.");
+                Environment.Exit(1);    // there's not point in continuing running if we have nothing to display.
             }
         }
 
-
-        private void catListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void categoryListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SQLiteConnection sqliteCon = new SQLiteConnection(dbConn.ConnectionString);
-
-            if (catListBox.SelectedItem == null)
+            if (categoryListBox.SelectedItem == null)
             {
                 return;
             }
-            // Get the current selected item in the Category List Box
-            string curCategory = "";
-
-            curCategory = catListBox.SelectedItem.ToString();
-   
-            // Query the database to select the tree name that matches the selected category
-            string query = "SELECT * FROM Wood JOIN Category USING(cat_id) WHERE Category.category_name = '" + curCategory + "';";
-
-            // Passes the query and connection to the helper class
-            SQLiteCommand createCommand = new SQLiteCommand(query, sqliteCon);
-
-            // Helper class reads the data from database 
-            SQLiteDataReader dr;
-
             try
             {
+                Woods = DBConn.getWoodsInCategory(categoryListBox.SelectedItem.ToString());
                 descripListBox.Text = "";
                 speciesListBox.Items.Clear();
-                sqliteCon.Open();
-                dr = createCommand.ExecuteReader();
-                // While loops that readers the data from the data base and stores it in the CatName property
-                while (dr.Read())
+                foreach (Wood wood in Woods)
                 {
-                    wood = new Wood(dr.GetInt32(0), dr.GetString(1), dr.GetString(2), dr.GetDouble(3), dr.GetDouble(4), dr.GetDouble(5), dr.GetDouble(6), dr.GetDouble(7), dr.GetDouble(8), dr.GetDouble(9), dr.GetDouble(10), dr.GetInt32(11));
                     speciesListBox.Items.Add(wood.TreeName);
-                    
                 }
-                // Closes the database connection
-                sqliteCon.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error getting the list o wood species for this category");
             }
-
-        }
-
-        private void descripListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
 
         }
 
@@ -123,8 +74,11 @@ namespace WoodWorksApp
             {
                 return;
             }
-                // Add the description of the selected wood to the discription list box
-                descripListBox.Text = wood.Description;
+
+            // get the appropriate wood species from the woods list
+            Wood = Woods[speciesListBox.SelectedIndex];
+            // Add the description of the selected wood to the discription list box
+            descripListBox.Text = Wood.Description;
 
             }
         }

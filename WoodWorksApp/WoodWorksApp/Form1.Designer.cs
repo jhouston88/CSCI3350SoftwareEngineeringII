@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.catListBox = new System.Windows.Forms.ListBox();
+            this.categoryListBox = new System.Windows.Forms.ListBox();
             this.speciesListBox = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,12 +48,12 @@
             // 
             // catListBox
             // 
-            this.catListBox.FormattingEnabled = true;
-            this.catListBox.Location = new System.Drawing.Point(12, 53);
-            this.catListBox.Name = "catListBox";
-            this.catListBox.Size = new System.Drawing.Size(179, 251);
-            this.catListBox.TabIndex = 0;
-            this.catListBox.SelectedIndexChanged += new System.EventHandler(this.catListBox_SelectedIndexChanged);
+            this.categoryListBox.FormattingEnabled = true;
+            this.categoryListBox.Location = new System.Drawing.Point(12, 53);
+            this.categoryListBox.Name = "catListBox";
+            this.categoryListBox.Size = new System.Drawing.Size(179, 251);
+            this.categoryListBox.TabIndex = 0;
+            this.categoryListBox.SelectedIndexChanged += new System.EventHandler(this.categoryListBox_SelectedIndexChanged);
             // 
             // speciesListBox
             // 
@@ -188,7 +188,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.speciesListBox);
-            this.Controls.Add(this.catListBox);
+            this.Controls.Add(this.categoryListBox);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -204,7 +204,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox catListBox;
+        private System.Windows.Forms.ListBox categoryListBox;
         private System.Windows.Forms.ListBox speciesListBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
