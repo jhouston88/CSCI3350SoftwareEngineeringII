@@ -59,7 +59,7 @@ namespace WoodWorksApp
                 Categories = DBConn.getCategories();
                 foreach (Category category in Categories)
                 {
-                    categoryListBox.Items.Add(category.CatName);
+                    categoryListBox.Items.Add(category.CategoryName);
                 }
             }
             catch(Exception ex)
