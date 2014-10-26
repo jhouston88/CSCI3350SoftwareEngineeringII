@@ -93,6 +93,12 @@
     <EmbeddedResource Include="calcBeamDeflectionForm.resx">
       <DependentUpon>calcBeamDeflectionForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DensityAtMositureContent.resx">
+      <DependentUpon>DensityAtMositureContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DimensionalChangeForm.resx">
+      <DependentUpon>DimensionalChangeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -12,9 +12,11 @@ namespace WoodWorksApp
 {
     public partial class DensityAtMositureContent : Form
     {
-        public DensityAtMositureContent()
+        private Wood wood;
+        public DensityAtMositureContent(Wood wood)
         {
             InitializeComponent();
+            this.wood = wood;
         }
     }
 }

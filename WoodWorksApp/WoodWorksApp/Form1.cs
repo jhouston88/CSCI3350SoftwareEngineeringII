@@ -18,17 +18,42 @@ namespace WoodWorksApp
         private List<Category> Categories;
         private List<Wood> Woods;
         private Wood Wood;
+        private String[] Calculations;
 
-
+        /// <summary>
+        /// Launches when the form is initialized (before it's shown)
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
-            
+            // associate the calculations listed in the combobox with the appropriate value so we can 
+            // easily use them later to launch the forms.
+            Calculations = new String[3]; // this number will need to be changed if more calcuations are added
+            Calculations[(int)ComboBoxCalculations.BEAM_DEFLECTION] = "Beam Deflection";
+            Calculations[(int)ComboBoxCalculations.DENSITY_AT_SPECIFIC_MOISTURE_CONTENT] = "Density at Specific Moisture Content";
+            Calculations[(int)ComboBoxCalculations.MOISTURE_DRIVEN_DIMENSIONAL_CHANGE] = "Moisture Driven Dimensional Change";
+
+            calculateComboBox.Items.AddRange(Calculations);
+
+            Wood = null; // Wood needs to initially be null so we can test to see if it's selected when we call for a calculation
+        }
+        
+        /// <summary>
+        /// Used to determine the calculations in the calculationsCombobox
+        /// </summary>
+        private enum ComboBoxCalculations
+        {
+            BEAM_DEFLECTION = 0, DENSITY_AT_SPECIFIC_MOISTURE_CONTENT, MOISTURE_DRIVEN_DIMENSIONAL_CHANGE
         }
 
+        /// <summary>
+        /// Launches when the main form is loaded, loads up the list of categories
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Populates the catListBox with all of the categories from the DB
+            // Populates the categoryListBox with all of the categories from the DB
             try
             {
                 Categories = DBConn.getCategories();
@@ -44,6 +69,11 @@ namespace WoodWorksApp
             }
         }
 
+        /// <summary>
+        /// Fired when the selected category is changed, updates the list of wood species accordingly.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void categoryListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (categoryListBox.SelectedItem == null)
@@ -53,12 +83,12 @@ namespace WoodWorksApp
             try
             {
                 Woods = DBConn.getWoodsInCategory(categoryListBox.SelectedItem.ToString());
-                descripListBox.Text = "";
                 speciesListBox.Items.Clear();
                 foreach (Wood wood in Woods)
                 {
                     speciesListBox.Items.Add(wood.TreeName);
                 }
+                Wood = null; // clear out wood so we don't pass a non-selected wood to the calculations
             }
             catch (Exception ex)
             {
@@ -67,6 +97,11 @@ namespace WoodWorksApp
 
         }
 
+        /// <summary>
+        /// Fired when a wood species is selected, displays a description of the wood species
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void speciesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Ensures that a item from the list box is selected instead of white space
@@ -81,5 +116,49 @@ namespace WoodWorksApp
             descripListBox.Text = Wood.Description;
 
             }
+
+        /// <summary>
+        /// Fired when the calculate button is clicked, launches the form for the respective calculation
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void calculateButton_Click(object sender, EventArgs e)
+        {
+            // no wood species selected yet
+            if(Wood == null)
+            {
+                MessageBox.Show("You must select a wood species before performing a calculation");
+                return;
+            }
+            // no calculation selected
+            if (calculateComboBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("You must select a calculation first");
+                return;
+            }
+            switch (calculateComboBox.SelectedIndex) 
+            {
+                case (int)ComboBoxCalculations.BEAM_DEFLECTION:
+                    Form beamDeflectionForm = new calcBeamDeflectionForm(Wood);
+                    beamDeflectionForm.Show();
+                    break;
+
+                case (int)ComboBoxCalculations.DENSITY_AT_SPECIFIC_MOISTURE_CONTENT:
+                    Form densityAtMoistureContentForm = new DensityAtMositureContent(Wood);
+                    densityAtMoistureContentForm.Show();
+                    break;
+
+                case (int)ComboBoxCalculations.MOISTURE_DRIVEN_DIMENSIONAL_CHANGE:
+                    Form dimensionalChangeForm = new DimensionalChangeForm(Wood);
+                    dimensionalChangeForm.Show();
+                    break;
+
+                // if someone gets here, then someone must have added a new calculation without updating the 
+                //  ComboBoxCalculations enum or this switch statement.
+                default:
+                    MessageBox.Show("Invalid selection");
+                    break;
+            }
         }
-    }
+     }
+}

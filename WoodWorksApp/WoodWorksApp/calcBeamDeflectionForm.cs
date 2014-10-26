@@ -12,9 +12,11 @@ namespace WoodWorksApp
 {
     public partial class calcBeamDeflectionForm : Form
     {
-        public calcBeamDeflectionForm()
+        private Wood wood;
+        public calcBeamDeflectionForm(Wood wood)
         {
             InitializeComponent();
+            this.wood = wood;
         }
     }
 }

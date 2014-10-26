@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WoodWorksApp
 {
-    class Wood
+    public class Wood
     {
         public int TreeId {  get; private set; }
         public string TreeName { get; private set; }
@@ -21,14 +21,6 @@ namespace WoodWorksApp
         public double BeamShearEdge { get; private set; }
         public int CatId { get; private set; }
 
-
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        public Wood()
-        {
-        }
-        
         /// <summary>
         /// Constructor
         /// </summary>

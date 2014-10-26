@@ -12,9 +12,12 @@ namespace WoodWorksApp
 {
     public partial class DimensionalChangeForm : Form
     {
-        public DimensionalChangeForm()
+        private Wood wood;
+
+        public DimensionalChangeForm(Wood wood)
         {
             InitializeComponent();
+            this.wood = wood;
         }
     }
 }
