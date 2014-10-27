@@ -39,18 +39,18 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.descripListBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.woodPanel = new System.Windows.Forms.Panel();
+            this.categoryPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.calculateComboBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.categoryPanel = new System.Windows.Forms.Panel();
-            this.woodPanel = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.categoryPanel.SuspendLayout();
-            this.woodPanel.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.woodPanel.SuspendLayout();
+            this.categoryPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // categoryListBox
@@ -159,24 +159,32 @@
             this.panel1.Size = new System.Drawing.Size(582, 353);
             this.panel1.TabIndex = 13;
             // 
-            // calculateComboBox
+            // panel3
             // 
-            this.calculateComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calculateComboBox.FormattingEnabled = true;
-            this.calculateComboBox.Location = new System.Drawing.Point(196, 26);
-            this.calculateComboBox.Name = "calculateComboBox";
-            this.calculateComboBox.Size = new System.Drawing.Size(219, 21);
-            this.calculateComboBox.TabIndex = 8;
-            this.calculateComboBox.Text = "Select Calculation";
+            this.panel3.Controls.Add(this.descripListBox);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Location = new System.Drawing.Point(389, 16);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(180, 267);
+            this.panel3.TabIndex = 14;
             // 
-            // label5
+            // woodPanel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(133, 29);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Calculation";
+            this.woodPanel.Controls.Add(this.label2);
+            this.woodPanel.Controls.Add(this.speciesListBox);
+            this.woodPanel.Location = new System.Drawing.Point(203, 16);
+            this.woodPanel.Name = "woodPanel";
+            this.woodPanel.Size = new System.Drawing.Size(180, 267);
+            this.woodPanel.TabIndex = 11;
+            // 
+            // categoryPanel
+            // 
+            this.categoryPanel.Controls.Add(this.label1);
+            this.categoryPanel.Controls.Add(this.categoryListBox);
+            this.categoryPanel.Location = new System.Drawing.Point(12, 16);
+            this.categoryPanel.Name = "categoryPanel";
+            this.categoryPanel.Size = new System.Drawing.Size(180, 267);
+            this.categoryPanel.TabIndex = 11;
             // 
             // panel2
             // 
@@ -189,32 +197,24 @@
             this.panel2.Size = new System.Drawing.Size(582, 64);
             this.panel2.TabIndex = 13;
             // 
-            // categoryPanel
+            // calculateComboBox
             // 
-            this.categoryPanel.Controls.Add(this.label1);
-            this.categoryPanel.Controls.Add(this.categoryListBox);
-            this.categoryPanel.Location = new System.Drawing.Point(12, 16);
-            this.categoryPanel.Name = "categoryPanel";
-            this.categoryPanel.Size = new System.Drawing.Size(180, 267);
-            this.categoryPanel.TabIndex = 11;
+            this.calculateComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.calculateComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculateComboBox.FormattingEnabled = true;
+            this.calculateComboBox.Location = new System.Drawing.Point(196, 26);
+            this.calculateComboBox.Name = "calculateComboBox";
+            this.calculateComboBox.Size = new System.Drawing.Size(219, 21);
+            this.calculateComboBox.TabIndex = 8;
             // 
-            // woodPanel
+            // label5
             // 
-            this.woodPanel.Controls.Add(this.label2);
-            this.woodPanel.Controls.Add(this.speciesListBox);
-            this.woodPanel.Location = new System.Drawing.Point(203, 16);
-            this.woodPanel.Name = "woodPanel";
-            this.woodPanel.Size = new System.Drawing.Size(180, 267);
-            this.woodPanel.TabIndex = 11;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.descripListBox);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(389, 16);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(180, 267);
-            this.panel3.TabIndex = 14;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(133, 29);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Calculation";
             // 
             // Form1
             // 
@@ -224,21 +224,21 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(415, 0);
+            this.MinimumSize = new System.Drawing.Size(415, 38);
             this.Name = "Form1";
             this.Text = "WoodWorks";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.categoryPanel.ResumeLayout(false);
-            this.categoryPanel.PerformLayout();
-            this.woodPanel.ResumeLayout(false);
-            this.woodPanel.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.woodPanel.ResumeLayout(false);
+            this.woodPanel.PerformLayout();
+            this.categoryPanel.ResumeLayout(false);
+            this.categoryPanel.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
