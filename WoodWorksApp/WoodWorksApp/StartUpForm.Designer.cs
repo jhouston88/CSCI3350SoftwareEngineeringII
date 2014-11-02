@@ -1,6 +1,6 @@
 ﻿namespace WoodWorksApp
 {
-    partial class Form1
+    partial class StartUpForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartUpForm));
             this.categoryListBox = new System.Windows.Forms.ListBox();
             this.speciesListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -216,16 +217,17 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Calculation";
             // 
-            // Form1
+            // StartUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 377);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(415, 38);
-            this.Name = "Form1";
+            this.Name = "StartUpForm";
             this.Text = "WoodWorks";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);

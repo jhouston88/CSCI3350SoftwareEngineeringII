@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace WoodWorksApp
 {
-    public partial class Form1 : Form
+    public partial class StartUpForm : Form
     {
         // Instantiate class objects 
         private DatabaseConnection DBConn = new DatabaseConnection();
@@ -23,7 +23,7 @@ namespace WoodWorksApp
         /// <summary>
         /// Launches when the form is initialized (before it's shown)
         /// </summary>
-        public Form1()
+        public StartUpForm()
         {
             InitializeComponent();
             // associate the calculations listed in the combobox with the appropriate value so we can 

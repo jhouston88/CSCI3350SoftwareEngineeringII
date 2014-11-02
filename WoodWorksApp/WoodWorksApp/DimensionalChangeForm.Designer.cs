@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DimensionalChangeForm));
             this.woodLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.widthTextBox = new System.Windows.Forms.TextBox();
@@ -138,6 +139,7 @@
             this.Controls.Add(this.widthTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.woodLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DimensionalChangeForm";
             this.Text = "DimensionalChangeForm";
             this.Load += new System.EventHandler(this.DimensionalChangeForm_Load);

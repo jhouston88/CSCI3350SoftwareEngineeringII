@@ -18,5 +18,10 @@ namespace WoodWorksApp
             InitializeComponent();
             this.wood = wood;
         }
+
+        private void DensityAtMositureContent_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

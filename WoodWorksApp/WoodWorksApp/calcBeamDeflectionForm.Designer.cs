@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(calcBeamDeflectionForm));
             this.beamWidthText = new System.Windows.Forms.Label();
             this.beamSpanText = new System.Windows.Forms.Label();
             this.beamDepthText = new System.Windows.Forms.Label();
@@ -147,6 +148,7 @@
             this.Controls.Add(this.beamDepthText);
             this.Controls.Add(this.beamSpanText);
             this.Controls.Add(this.beamWidthText);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "calcBeamDeflectionForm";
             this.Text = "calcBeamDeflectionForm";
             this.ResumeLayout(false);
