@@ -37,24 +37,36 @@
             this.beamSpanEntry = new System.Windows.Forms.TextBox();
             this.beamDepthEntry = new System.Windows.Forms.TextBox();
             this.beamLoadEntry = new System.Windows.Forms.TextBox();
-            this.beamShearCalculation = new System.Windows.Forms.TextBox();
+            this.resultDisplay = new System.Windows.Forms.TextBox();
             this.submitButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.grainType = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.moistureContent = new System.Windows.Forms.ComboBox();
+            this.woodName = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // beamWidthText
             // 
             this.beamWidthText.AutoSize = true;
-            this.beamWidthText.Location = new System.Drawing.Point(60, 42);
+            this.beamWidthText.Location = new System.Drawing.Point(93, 149);
             this.beamWidthText.Name = "beamWidthText";
-            this.beamWidthText.Size = new System.Drawing.Size(65, 13);
+            this.beamWidthText.Size = new System.Drawing.Size(35, 13);
             this.beamWidthText.TabIndex = 0;
-            this.beamWidthText.Text = "Beam Width";
+            this.beamWidthText.Text = "Width";
             // 
             // beamSpanText
             // 
             this.beamSpanText.AutoSize = true;
-            this.beamSpanText.Location = new System.Drawing.Point(63, 142);
+            this.beamSpanText.Location = new System.Drawing.Point(65, 201);
             this.beamSpanText.Name = "beamSpanText";
             this.beamSpanText.Size = new System.Drawing.Size(62, 13);
             this.beamSpanText.TabIndex = 1;
@@ -63,16 +75,16 @@
             // beamDepthText
             // 
             this.beamDepthText.AutoSize = true;
-            this.beamDepthText.Location = new System.Drawing.Point(63, 208);
+            this.beamDepthText.Location = new System.Drawing.Point(91, 175);
             this.beamDepthText.Name = "beamDepthText";
-            this.beamDepthText.Size = new System.Drawing.Size(66, 13);
+            this.beamDepthText.Size = new System.Drawing.Size(36, 13);
             this.beamDepthText.TabIndex = 2;
-            this.beamDepthText.Text = "Beam Depth";
+            this.beamDepthText.Text = "Depth";
             // 
             // beamLoadText
             // 
             this.beamLoadText.AutoSize = true;
-            this.beamLoadText.Location = new System.Drawing.Point(66, 299);
+            this.beamLoadText.Location = new System.Drawing.Point(66, 227);
             this.beamLoadText.Name = "beamLoadText";
             this.beamLoadText.Size = new System.Drawing.Size(61, 13);
             this.beamLoadText.TabIndex = 3;
@@ -80,66 +92,196 @@
             // 
             // beamWidthEntry
             // 
-            this.beamWidthEntry.Location = new System.Drawing.Point(169, 42);
+            this.beamWidthEntry.Location = new System.Drawing.Point(133, 146);
             this.beamWidthEntry.Name = "beamWidthEntry";
-            this.beamWidthEntry.Size = new System.Drawing.Size(100, 20);
+            this.beamWidthEntry.Size = new System.Drawing.Size(46, 20);
             this.beamWidthEntry.TabIndex = 4;
+            this.beamWidthEntry.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // beamSpanEntry
             // 
-            this.beamSpanEntry.Location = new System.Drawing.Point(169, 142);
+            this.beamSpanEntry.Location = new System.Drawing.Point(133, 198);
             this.beamSpanEntry.Name = "beamSpanEntry";
-            this.beamSpanEntry.Size = new System.Drawing.Size(100, 20);
+            this.beamSpanEntry.Size = new System.Drawing.Size(46, 20);
             this.beamSpanEntry.TabIndex = 5;
+            this.beamSpanEntry.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // beamDepthEntry
             // 
-            this.beamDepthEntry.Location = new System.Drawing.Point(160, 208);
+            this.beamDepthEntry.Location = new System.Drawing.Point(133, 172);
             this.beamDepthEntry.Name = "beamDepthEntry";
-            this.beamDepthEntry.Size = new System.Drawing.Size(100, 20);
+            this.beamDepthEntry.Size = new System.Drawing.Size(46, 20);
             this.beamDepthEntry.TabIndex = 6;
+            this.beamDepthEntry.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // beamLoadEntry
             // 
-            this.beamLoadEntry.Location = new System.Drawing.Point(160, 299);
+            this.beamLoadEntry.Location = new System.Drawing.Point(133, 224);
             this.beamLoadEntry.Name = "beamLoadEntry";
-            this.beamLoadEntry.Size = new System.Drawing.Size(100, 20);
+            this.beamLoadEntry.Size = new System.Drawing.Size(46, 20);
             this.beamLoadEntry.TabIndex = 7;
+            this.beamLoadEntry.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // beamShearCalculation
+            // resultDisplay
             // 
-            this.beamShearCalculation.Location = new System.Drawing.Point(123, 472);
-            this.beamShearCalculation.Name = "beamShearCalculation";
-            this.beamShearCalculation.ReadOnly = true;
-            this.beamShearCalculation.Size = new System.Drawing.Size(100, 20);
-            this.beamShearCalculation.TabIndex = 8;
+            this.resultDisplay.AcceptsTab = true;
+            this.resultDisplay.Location = new System.Drawing.Point(94, 267);
+            this.resultDisplay.Name = "resultDisplay";
+            this.resultDisplay.ReadOnly = true;
+            this.resultDisplay.Size = new System.Drawing.Size(100, 20);
+            this.resultDisplay.TabIndex = 8;
+            this.resultDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // submitButton
             // 
-            this.submitButton.Location = new System.Drawing.Point(69, 531);
+            this.submitButton.Location = new System.Drawing.Point(54, 298);
             this.submitButton.Name = "submitButton";
-            this.submitButton.Size = new System.Drawing.Size(75, 23);
+            this.submitButton.Size = new System.Drawing.Size(75, 32);
             this.submitButton.TabIndex = 9;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(223, 531);
+            this.backButton.Location = new System.Drawing.Point(145, 298);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(75, 23);
+            this.backButton.Size = new System.Drawing.Size(73, 32);
             this.backButton.TabIndex = 10;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(118, 251);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Result";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(66, 117);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 17);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Beam Dimensions";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(60, 268);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 17);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "δ =";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(182, 205);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(18, 13);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "in.";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(182, 231);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(18, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "lb.";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(48, 87);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Grain Type:";
+            // 
+            // grainType
+            // 
+            this.grainType.AllowDrop = true;
+            this.grainType.FormattingEnabled = true;
+            this.grainType.Items.AddRange(new object[] {
+            "Flat",
+            "Edge"});
+            this.grainType.Location = new System.Drawing.Point(108, 87);
+            this.grainType.MaxDropDownItems = 2;
+            this.grainType.Name = "grainType";
+            this.grainType.Size = new System.Drawing.Size(71, 21);
+            this.grainType.TabIndex = 17;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(20, 51);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Moisture Content:";
+            // 
+            // moistureContent
+            // 
+            this.moistureContent.AllowDrop = true;
+            this.moistureContent.FormattingEnabled = true;
+            this.moistureContent.Items.AddRange(new object[] {
+            "12%",
+            "Green"});
+            this.moistureContent.Location = new System.Drawing.Point(108, 48);
+            this.moistureContent.MaxDropDownItems = 2;
+            this.moistureContent.Name = "moistureContent";
+            this.moistureContent.Size = new System.Drawing.Size(71, 21);
+            this.moistureContent.TabIndex = 17;
+            // 
+            // woodName
+            // 
+            this.woodName.AutoSize = true;
+            this.woodName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.woodName.Location = new System.Drawing.Point(84, 13);
+            this.woodName.Name = "woodName";
+            this.woodName.Size = new System.Drawing.Size(109, 17);
+            this.woodName.TabIndex = 19;
+            this.woodName.Text = "woodNameHere";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WoodWorksApp.Properties.Resources.indendpDirctOfWood;
+            this.pictureBox1.InitialImage = global::WoodWorksApp.Properties.Resources.indendpDirctOfWood;
+            this.pictureBox1.Location = new System.Drawing.Point(251, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(362, 301);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
             // 
             // calcBeamDeflectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(351, 575);
+            this.ClientSize = new System.Drawing.Size(625, 338);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.woodName);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.moistureContent);
+            this.Controls.Add(this.grainType);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.submitButton);
-            this.Controls.Add(this.beamShearCalculation);
+            this.Controls.Add(this.resultDisplay);
             this.Controls.Add(this.beamLoadEntry);
             this.Controls.Add(this.beamDepthEntry);
             this.Controls.Add(this.beamSpanEntry);
@@ -150,7 +292,9 @@
             this.Controls.Add(this.beamWidthText);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "calcBeamDeflectionForm";
-            this.Text = "calcBeamDeflectionForm";
+            this.Text = "Beam Deflection";
+            this.Load += new System.EventHandler(this.calcBeamDeflectionForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,8 +310,19 @@
         private System.Windows.Forms.TextBox beamSpanEntry;
         private System.Windows.Forms.TextBox beamDepthEntry;
         private System.Windows.Forms.TextBox beamLoadEntry;
-        private System.Windows.Forms.TextBox beamShearCalculation;
+        private System.Windows.Forms.TextBox resultDisplay;
         private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox grainType;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox moistureContent;
+        private System.Windows.Forms.Label woodName;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
