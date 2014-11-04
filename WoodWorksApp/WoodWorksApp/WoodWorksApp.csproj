@@ -33,8 +33,7 @@
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>Wooden_Cog-icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
@@ -138,6 +137,7 @@
     <Content Include="Images\densityCalc.png" />
     <Content Include="Images\indendpDirctOfWood.PNG" />
     <Content Include="Images\woodCog.ico" />
+    <Content Include="Wooden_Cog-icon.ico" />
     <None Include="Resources\densityCalc1.png" />
     <None Include="Resources\calcDensity1.png" />
     <None Include="Resources\calcDensity.png" />

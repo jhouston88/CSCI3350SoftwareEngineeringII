@@ -160,5 +160,10 @@ namespace WoodWorksApp
                     break;
             }
         }
+
+        private void descripListBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
      }
 }

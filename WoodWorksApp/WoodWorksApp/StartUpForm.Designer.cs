@@ -147,6 +147,7 @@
             this.descripListBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.descripListBox.Size = new System.Drawing.Size(180, 251);
             this.descripListBox.TabIndex = 12;
+            this.descripListBox.TextChanged += new System.EventHandler(this.descripListBox_TextChanged);
             // 
             // panel1
             // 
