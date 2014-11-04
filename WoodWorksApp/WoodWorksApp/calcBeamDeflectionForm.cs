@@ -37,7 +37,7 @@ namespace WoodWorksApp
         {
             double width;
             bool widthCheck = double.TryParse(beamWidthEntry.Text, out width);
-
+            
             double depth;
             bool depthCheck = double.TryParse(beamWidthEntry.Text, out depth);
 
@@ -59,7 +59,14 @@ namespace WoodWorksApp
             else
                 elasticityIs12percent = false;
 
-            resultDisplay.Text = wood.calculateBeamDeflection(width, depth, load, span, elasticityIs12percent, grainIsFlat).ToString();
+            //If all parsers returned true for no errors AND all variables are greater than zero ELSE display a message box
+            if ((widthCheck && depthCheck && spanCheck && loadCheck) && (width > 0 && depth > 0 && load > 0 && span > 0))
+                resultDisplay.Text = wood.calculateBeamDeflection(width, depth, load, span, elasticityIs12percent, grainIsFlat).ToString();
+            else
+            {
+                MessageBox.Show("All entries must be positive numbers.");
+                resultDisplay.Text = String.Empty;
+            }
         }
 
         

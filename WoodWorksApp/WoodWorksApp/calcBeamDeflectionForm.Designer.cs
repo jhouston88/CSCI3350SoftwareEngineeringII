@@ -210,6 +210,7 @@
             // grainType
             // 
             this.grainType.AllowDrop = true;
+            this.grainType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.grainType.FormattingEnabled = true;
             this.grainType.Items.AddRange(new object[] {
             "Flat",
@@ -232,6 +233,7 @@
             // moistureContent
             // 
             this.moistureContent.AllowDrop = true;
+            this.moistureContent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.moistureContent.FormattingEnabled = true;
             this.moistureContent.Items.AddRange(new object[] {
             "12%",
