@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -164,6 +165,21 @@ namespace WoodWorksApp
         private void descripListBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void readMeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process process = new Process();
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+            process.StartInfo = startInfo;
+
+            startInfo.FileName = @"C:\Users\Josh\Documents\GitHub\CSCI3350SoftwareEngineeringII\WoodWorksApp\WoodWorksApp\Resources\Read Me Document.pdf";
+            process.Start();
+        }
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
      }
 }
