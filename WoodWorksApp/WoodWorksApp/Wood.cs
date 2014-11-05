@@ -157,7 +157,6 @@ namespace WoodWorksApp
             // changes the value of Gb if the condition is 12% moisture content
             if (gravity == "12%")
                 Gb = this.SpecificGravity12Percent;
-            Console.WriteLine(Gb);
             // calculates Gm
             Gm = (Gb / (1 - 0.265 * a * Gb));
             // calculates p
