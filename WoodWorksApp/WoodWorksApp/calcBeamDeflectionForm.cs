@@ -22,7 +22,7 @@ namespace WoodWorksApp
 
         private void calcBeamDeflectionForm_Load(object sender, EventArgs e)
         {
-            woodName.Text = wood.TreeName + " " + wood.Category;
+            woodName.Text = wood.TreeName + " " + wood.Category.CategoryName;
             moistureContent.SelectedItem = moistureContent.Items[0];
             grainType.SelectedItem = grainType.Items[0];
             beamWidthEntry.Text = "0";
@@ -39,13 +39,13 @@ namespace WoodWorksApp
             bool widthCheck = double.TryParse(beamWidthEntry.Text, out width);
             
             double depth;
-            bool depthCheck = double.TryParse(beamWidthEntry.Text, out depth);
-
+            bool depthCheck = double.TryParse(beamDepthEntry.Text, out depth);
+            
             double span;
-            bool spanCheck = double.TryParse(beamWidthEntry.Text, out span);
+            bool spanCheck = double.TryParse(beamSpanEntry.Text, out span);
 
             double load;
-            bool loadCheck = double.TryParse(beamWidthEntry.Text, out load);
+            bool loadCheck = double.TryParse(beamLoadEntry.Text, out load);
 
             bool grainIsFlat;
             if (grainType.SelectedItem.ToString() == "Flat")
@@ -68,7 +68,6 @@ namespace WoodWorksApp
                 resultDisplay.Text = String.Empty;
             }
         }
-
         
     }
 }

@@ -22,6 +22,7 @@ namespace WoodWorksApp
         private void DensityAtMositureContent_Load(object sender, EventArgs e)
         {
             woodName.Text = "Calculate the density of\r" + wood.TreeName + " " + wood.Category.CategoryName;
+            moistureContent.SelectedItem = moistureContent.Items[1];
         }
 
         private void calculateButton_Click(object sender, EventArgs e)

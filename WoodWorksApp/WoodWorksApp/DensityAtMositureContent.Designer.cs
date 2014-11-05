@@ -46,8 +46,8 @@
             // mLabel
             // 
             this.mLabel.AutoSize = true;
-            this.mLabel.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mLabel.Location = new System.Drawing.Point(102, 72);
+            this.mLabel.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mLabel.Location = new System.Drawing.Point(102, 78);
             this.mLabel.Name = "mLabel";
             this.mLabel.Size = new System.Drawing.Size(11, 12);
             this.mLabel.TabIndex = 0;
@@ -55,10 +55,10 @@
             // 
             // valueM
             // 
-            this.valueM.Location = new System.Drawing.Point(119, 70);
+            this.valueM.Location = new System.Drawing.Point(119, 76);
             this.valueM.Name = "valueM";
-            this.valueM.Size = new System.Drawing.Size(70, 21);
-            this.valueM.TabIndex = 1;
+            this.valueM.Size = new System.Drawing.Size(70, 20);
+            this.valueM.TabIndex = 0;
             this.valueM.Value = new decimal(new int[] {
             20,
             0,
@@ -69,7 +69,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(187, 72);
+            this.label2.Location = new System.Drawing.Point(187, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(20, 16);
             this.label2.TabIndex = 2;
@@ -78,9 +78,9 @@
             // equationPicture
             // 
             this.equationPicture.Image = global::WoodWorksApp.Properties.Resources.densityCalc;
-            this.equationPicture.Location = new System.Drawing.Point(14, 145);
+            this.equationPicture.Location = new System.Drawing.Point(14, 157);
             this.equationPicture.Name = "equationPicture";
-            this.equationPicture.Size = new System.Drawing.Size(211, 57);
+            this.equationPicture.Size = new System.Drawing.Size(211, 62);
             this.equationPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.equationPicture.TabIndex = 3;
             this.equationPicture.TabStop = false;
@@ -88,18 +88,18 @@
             // woodName
             // 
             this.woodName.AutoSize = true;
-            this.woodName.Location = new System.Drawing.Point(12, 9);
+            this.woodName.Location = new System.Drawing.Point(12, 10);
             this.woodName.Name = "woodName";
-            this.woodName.Size = new System.Drawing.Size(53, 12);
+            this.woodName.Size = new System.Drawing.Size(61, 13);
             this.woodName.TabIndex = 4;
             this.woodName.Text = "woodName";
             // 
             // moistureContentLabel
             // 
             this.moistureContentLabel.AutoSize = true;
-            this.moistureContentLabel.Location = new System.Drawing.Point(12, 102);
+            this.moistureContentLabel.Location = new System.Drawing.Point(12, 111);
             this.moistureContentLabel.Name = "moistureContentLabel";
-            this.moistureContentLabel.Size = new System.Drawing.Size(101, 12);
+            this.moistureContentLabel.Size = new System.Drawing.Size(87, 13);
             this.moistureContentLabel.TabIndex = 6;
             this.moistureContentLabel.Text = "Moisture Content";
             // 
@@ -111,44 +111,44 @@
             this.moistureContent.Items.AddRange(new object[] {
             "12%",
             "Green"});
-            this.moistureContent.Location = new System.Drawing.Point(118, 99);
+            this.moistureContent.Location = new System.Drawing.Point(118, 107);
             this.moistureContent.MaxDropDownItems = 2;
             this.moistureContent.Name = "moistureContent";
-            this.moistureContent.Size = new System.Drawing.Size(71, 20);
-            this.moistureContent.TabIndex = 19;
+            this.moistureContent.Size = new System.Drawing.Size(71, 21);
+            this.moistureContent.TabIndex = 1;
             // 
             // densityLabel
             // 
             this.densityLabel.AutoSize = true;
-            this.densityLabel.Location = new System.Drawing.Point(90, 226);
+            this.densityLabel.Location = new System.Drawing.Point(90, 245);
             this.densityLabel.Name = "densityLabel";
-            this.densityLabel.Size = new System.Drawing.Size(23, 12);
+            this.densityLabel.Size = new System.Drawing.Size(19, 13);
             this.densityLabel.TabIndex = 21;
             this.densityLabel.Text = "ρ=";
             // 
             // result
             // 
-            this.result.Location = new System.Drawing.Point(117, 221);
+            this.result.Location = new System.Drawing.Point(117, 239);
             this.result.Name = "result";
             this.result.ReadOnly = true;
-            this.result.Size = new System.Drawing.Size(99, 21);
-            this.result.TabIndex = 22;
+            this.result.Size = new System.Drawing.Size(99, 20);
+            this.result.TabIndex = 2;
             // 
             // calculateButton
             // 
-            this.calculateButton.Location = new System.Drawing.Point(84, 272);
+            this.calculateButton.Location = new System.Drawing.Point(84, 295);
             this.calculateButton.Name = "calculateButton";
-            this.calculateButton.Size = new System.Drawing.Size(75, 23);
-            this.calculateButton.TabIndex = 23;
+            this.calculateButton.Size = new System.Drawing.Size(75, 25);
+            this.calculateButton.TabIndex = 3;
             this.calculateButton.Text = "Calculate";
             this.calculateButton.UseVisualStyleBackColor = true;
             this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
             // 
             // DensityAtMositureContent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(253, 307);
+            this.ClientSize = new System.Drawing.Size(253, 333);
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.result);
             this.Controls.Add(this.densityLabel);
@@ -159,6 +159,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.valueM);
             this.Controls.Add(this.mLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DensityAtMositureContent";
             this.Text = "Density";

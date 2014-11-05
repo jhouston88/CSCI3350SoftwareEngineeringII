@@ -39,7 +39,6 @@
             this.beamLoadEntry = new System.Windows.Forms.TextBox();
             this.resultDisplay = new System.Windows.Forms.TextBox();
             this.submitButton = new System.Windows.Forms.Button();
-            this.backButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,6 +50,8 @@
             this.moistureContent = new System.Windows.Forms.ComboBox();
             this.woodName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,7 +96,7 @@
             this.beamWidthEntry.Location = new System.Drawing.Point(133, 146);
             this.beamWidthEntry.Name = "beamWidthEntry";
             this.beamWidthEntry.Size = new System.Drawing.Size(46, 20);
-            this.beamWidthEntry.TabIndex = 4;
+            this.beamWidthEntry.TabIndex = 2;
             this.beamWidthEntry.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // beamSpanEntry
@@ -103,7 +104,7 @@
             this.beamSpanEntry.Location = new System.Drawing.Point(133, 198);
             this.beamSpanEntry.Name = "beamSpanEntry";
             this.beamSpanEntry.Size = new System.Drawing.Size(46, 20);
-            this.beamSpanEntry.TabIndex = 5;
+            this.beamSpanEntry.TabIndex = 4;
             this.beamSpanEntry.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // beamDepthEntry
@@ -111,7 +112,7 @@
             this.beamDepthEntry.Location = new System.Drawing.Point(133, 172);
             this.beamDepthEntry.Name = "beamDepthEntry";
             this.beamDepthEntry.Size = new System.Drawing.Size(46, 20);
-            this.beamDepthEntry.TabIndex = 6;
+            this.beamDepthEntry.TabIndex = 3;
             this.beamDepthEntry.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // beamLoadEntry
@@ -119,7 +120,7 @@
             this.beamLoadEntry.Location = new System.Drawing.Point(133, 224);
             this.beamLoadEntry.Name = "beamLoadEntry";
             this.beamLoadEntry.Size = new System.Drawing.Size(46, 20);
-            this.beamLoadEntry.TabIndex = 7;
+            this.beamLoadEntry.TabIndex = 5;
             this.beamLoadEntry.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // resultDisplay
@@ -129,27 +130,18 @@
             this.resultDisplay.Name = "resultDisplay";
             this.resultDisplay.ReadOnly = true;
             this.resultDisplay.Size = new System.Drawing.Size(100, 20);
-            this.resultDisplay.TabIndex = 8;
+            this.resultDisplay.TabIndex = 6;
             this.resultDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // submitButton
             // 
-            this.submitButton.Location = new System.Drawing.Point(54, 298);
+            this.submitButton.Location = new System.Drawing.Point(104, 293);
             this.submitButton.Name = "submitButton";
-            this.submitButton.Size = new System.Drawing.Size(75, 32);
-            this.submitButton.TabIndex = 9;
-            this.submitButton.Text = "Submit";
+            this.submitButton.Size = new System.Drawing.Size(83, 20);
+            this.submitButton.TabIndex = 7;
+            this.submitButton.Text = "Calculate";
             this.submitButton.UseVisualStyleBackColor = true;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
-            // 
-            // backButton
-            // 
-            this.backButton.Location = new System.Drawing.Point(145, 298);
-            this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(73, 32);
-            this.backButton.TabIndex = 10;
-            this.backButton.Text = "Back";
-            this.backButton.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -183,7 +175,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(182, 205);
+            this.label4.Location = new System.Drawing.Point(176, 201);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(18, 13);
             this.label4.TabIndex = 15;
@@ -192,7 +184,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(182, 231);
+            this.label5.Location = new System.Drawing.Point(176, 227);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(18, 13);
             this.label5.TabIndex = 15;
@@ -215,11 +207,11 @@
             this.grainType.Items.AddRange(new object[] {
             "Flat",
             "Edge"});
-            this.grainType.Location = new System.Drawing.Point(108, 87);
+            this.grainType.Location = new System.Drawing.Point(116, 87);
             this.grainType.MaxDropDownItems = 2;
             this.grainType.Name = "grainType";
             this.grainType.Size = new System.Drawing.Size(71, 21);
-            this.grainType.TabIndex = 17;
+            this.grainType.TabIndex = 1;
             // 
             // label7
             // 
@@ -238,11 +230,11 @@
             this.moistureContent.Items.AddRange(new object[] {
             "12%",
             "Green"});
-            this.moistureContent.Location = new System.Drawing.Point(108, 48);
+            this.moistureContent.Location = new System.Drawing.Point(116, 48);
             this.moistureContent.MaxDropDownItems = 2;
             this.moistureContent.Name = "moistureContent";
             this.moistureContent.Size = new System.Drawing.Size(71, 21);
-            this.moistureContent.TabIndex = 17;
+            this.moistureContent.TabIndex = 0;
             // 
             // woodName
             // 
@@ -265,11 +257,31 @@
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(176, 179);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(18, 13);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "in.";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(176, 153);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(18, 13);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "in.";
+            // 
             // calcBeamDeflectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 338);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.woodName);
             this.Controls.Add(this.label7);
@@ -281,7 +293,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.backButton);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.resultDisplay);
             this.Controls.Add(this.beamLoadEntry);
@@ -292,6 +303,7 @@
             this.Controls.Add(this.beamDepthText);
             this.Controls.Add(this.beamSpanText);
             this.Controls.Add(this.beamWidthText);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "calcBeamDeflectionForm";
             this.Text = "Beam Deflection";
@@ -314,7 +326,6 @@
         private System.Windows.Forms.TextBox beamLoadEntry;
         private System.Windows.Forms.TextBox resultDisplay;
         private System.Windows.Forms.Button submitButton;
-        private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -326,5 +337,7 @@
         private System.Windows.Forms.ComboBox moistureContent;
         private System.Windows.Forms.Label woodName;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }

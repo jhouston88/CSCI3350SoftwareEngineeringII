@@ -173,7 +173,7 @@ namespace WoodWorksApp
             ProcessStartInfo startInfo = new ProcessStartInfo();
             process.StartInfo = startInfo;
 
-            startInfo.FileName = @"C:\Users\Josh\Documents\GitHub\CSCI3350SoftwareEngineeringII\WoodWorksApp\WoodWorksApp\Resources\Read Me Document.pdf";
+            startInfo.FileName = @".\Read Me Document.pdf";
             process.Start();
         }
 

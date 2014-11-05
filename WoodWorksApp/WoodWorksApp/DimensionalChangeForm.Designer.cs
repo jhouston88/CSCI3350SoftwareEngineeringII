@@ -101,7 +101,7 @@
             this.radialRadioButton.Location = new System.Drawing.Point(6, 19);
             this.radialRadioButton.Name = "radialRadioButton";
             this.radialRadioButton.Size = new System.Drawing.Size(55, 17);
-            this.radialRadioButton.TabIndex = 5;
+            this.radialRadioButton.TabIndex = 1;
             this.radialRadioButton.TabStop = true;
             this.radialRadioButton.Text = "Radial";
             this.radialRadioButton.UseVisualStyleBackColor = true;
@@ -112,7 +112,7 @@
             this.tangentialradioButton.Location = new System.Drawing.Point(6, 42);
             this.tangentialradioButton.Name = "tangentialradioButton";
             this.tangentialradioButton.Size = new System.Drawing.Size(75, 17);
-            this.tangentialradioButton.TabIndex = 6;
+            this.tangentialradioButton.TabIndex = 2;
             this.tangentialradioButton.Text = "Tangential";
             this.tangentialradioButton.UseVisualStyleBackColor = true;
             // 
@@ -139,6 +139,7 @@
             this.Controls.Add(this.widthTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.woodLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DimensionalChangeForm";
             this.Text = "DimensionalChangeForm";
