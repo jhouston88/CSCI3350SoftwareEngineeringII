@@ -140,7 +140,7 @@ namespace WoodWorksApp
         /// <param name="specifiedM">The moisture content</param>
         /// <param name="gravity">The type of gravity</param>
         /// <returns></returns>
-        public double calculateDensityAtMositureContent(double specifiedM, Gravity gravity)
+        public double calculateDensityAtMositureContent(double specifiedM, string gravity)
         {
             // Three steps to get the density
             // First, calculates the a via using a = (30 - M) / 30 where M is determined by the user and its default value is 20
@@ -155,8 +155,9 @@ namespace WoodWorksApp
             // calculates a
             a = (30 - M) / 30;
             // changes the value of Gb if the condition is 12% moisture content
-            if (gravity == Gravity.TWELVEPERCENT)
+            if (gravity == "12%")
                 Gb = this.SpecificGravity12Percent;
+            Console.WriteLine(Gb);
             // calculates Gm
             Gm = (Gb / (1 - 0.265 * a * Gb));
             // calculates p
@@ -165,10 +166,5 @@ namespace WoodWorksApp
             return p;
         }
 
-        // Method used for the density calculation
-        public enum Gravity
-        {
-            GREEN, TWELVEPERCENT
-        }
     }
 }
