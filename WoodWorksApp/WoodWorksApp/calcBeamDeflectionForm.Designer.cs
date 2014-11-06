@@ -305,6 +305,7 @@
             this.Controls.Add(this.beamWidthText);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "calcBeamDeflectionForm";
             this.Text = "Beam Deflection";
             this.Load += new System.EventHandler(this.calcBeamDeflectionForm_Load);

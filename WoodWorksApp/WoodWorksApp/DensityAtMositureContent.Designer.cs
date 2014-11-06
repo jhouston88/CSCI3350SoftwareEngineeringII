@@ -161,6 +161,7 @@
             this.Controls.Add(this.mLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "DensityAtMositureContent";
             this.Text = "Density";
             this.Load += new System.EventHandler(this.DensityAtMositureContent_Load);

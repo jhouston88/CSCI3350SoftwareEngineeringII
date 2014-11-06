@@ -77,15 +77,15 @@ namespace WoodWorksApp
 				
 			//Calculate the modified beam area
 			// A` = 5/6 * b * h				
-			double area = 5 / 6 * beamWidth * beamDepth;
+			double area = (5.0 / 6.0) * beamWidth * beamDepth;
 				
 			//Calculate elasticity
-			// E = ModulusOfElasticity * 110%
+			// E = ModulusOfElasticity
             double elasticity;
             if(elasticityIs12Pct)
-			    elasticity = Elasticity12Percent * 1.10;
+			    elasticity = Elasticity12Percent;
             else
-                elasticity = ElasticityGreen * 1.10;
+                elasticity = ElasticityGreen;
 				
 			//Calculate beam shear
 			// beamShear/EL = BeamShearRatio

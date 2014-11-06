@@ -141,6 +141,7 @@
             this.Controls.Add(this.woodLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "DimensionalChangeForm";
             this.Text = "DimensionalChangeForm";
             this.Load += new System.EventHandler(this.DimensionalChangeForm_Load);
