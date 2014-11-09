@@ -49,9 +49,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.moistureContent = new System.Windows.Forms.ComboBox();
             this.woodName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -246,17 +248,6 @@
             this.woodName.TabIndex = 19;
             this.woodName.Text = "woodNameHere";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WoodWorksApp.Properties.Resources.indendpDirctOfWood;
-            this.pictureBox1.InitialImage = global::WoodWorksApp.Properties.Resources.indendpDirctOfWood;
-            this.pictureBox1.Location = new System.Drawing.Point(251, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(362, 301);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -275,11 +266,33 @@
             this.label9.TabIndex = 22;
             this.label9.Text = "in.";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WoodWorksApp.Properties.Resources.beamDeflection;
+            this.pictureBox2.Location = new System.Drawing.Point(256, 243);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(205, 70);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WoodWorksApp.Properties.Resources.indendpDirctOfWood;
+            this.pictureBox1.InitialImage = global::WoodWorksApp.Properties.Resources.indendpDirctOfWood;
+            this.pictureBox1.Location = new System.Drawing.Point(256, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(357, 197);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
             // calcBeamDeflectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 338);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox1);
@@ -309,6 +322,7 @@
             this.Name = "calcBeamDeflectionForm";
             this.Text = "Beam Deflection";
             this.Load += new System.EventHandler(this.calcBeamDeflectionForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -340,5 +354,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

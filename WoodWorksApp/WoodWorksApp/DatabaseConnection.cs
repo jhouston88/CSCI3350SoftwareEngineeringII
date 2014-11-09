@@ -10,7 +10,7 @@ namespace WoodWorksApp
 {
     class DatabaseConnection
     {
-        private string connectionString = @"DataSource=woodAppDBrev4.db; Version = 3; ";
+        private string connectionString = @"DataSource=woodAppDBrev5.sqlite; Version = 3; ";
 
         public string ConnectionString { get { return connectionString; } }
 
@@ -61,7 +61,9 @@ namespace WoodWorksApp
                 // add all the wood species in the database to the woods list
                 while (dr.Read())
                 {
-                    woods.Add(new Wood(dr.GetInt32(0), dr.GetString(1), dr.GetString(2), dr.GetDouble(3), dr.GetDouble(4), dr.GetDouble(5), dr.GetDouble(6), dr.GetDouble(7), dr.GetDouble(8), dr.GetDouble(9), dr.GetDouble(10), new Category(dr.GetInt32(11), dr.GetString(12))));
+                    woods.Add(new Wood(dr.GetInt32(0), dr.GetString(1), dr.GetString(2), dr.GetDouble(3), dr.GetDouble(4), 
+                        dr.GetDouble(5), dr.GetDouble(6), dr.GetDouble(7), dr.GetDouble(8), dr.GetDouble(9), dr.GetDouble(10),
+                        dr.GetDouble(11), dr.GetDouble(12), new Category(dr.GetInt32(13), dr.GetString(14))));
                 }
                 sqliteCon.Close();
             }

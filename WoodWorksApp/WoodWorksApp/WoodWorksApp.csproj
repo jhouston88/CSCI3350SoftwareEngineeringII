@@ -153,6 +153,8 @@
     <Content Include="Images\densityCalc.png" />
     <Content Include="Images\indendpDirctOfWood.PNG" />
     <Content Include="Images\woodCog.ico" />
+    <None Include="Resources\beamDeflection.png" />
+    <None Include="Resources\moistureChange.png" />
     <Content Include="Wooden_Cog-icon.ico" />
     <None Include="Resources\densityCalc1.png" />
     <None Include="Resources\calcDensity1.png" />

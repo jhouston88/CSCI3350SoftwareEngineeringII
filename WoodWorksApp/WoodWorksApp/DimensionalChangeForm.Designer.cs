@@ -38,7 +38,11 @@
             this.radialRadioButton = new System.Windows.Forms.RadioButton();
             this.tangentialradioButton = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // woodLabel
@@ -127,11 +131,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Grain Direction";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WoodWorksApp.Properties.Resources.moistureChange;
+            this.pictureBox1.Location = new System.Drawing.Point(238, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(179, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WoodWorksApp.Properties.Resources.indendpDirctOfWood;
+            this.pictureBox2.Location = new System.Drawing.Point(238, 98);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(343, 228);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
             // DimensionalChangeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(182, 192);
+            this.ClientSize = new System.Drawing.Size(625, 338);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.resultTextBox);
@@ -147,6 +173,8 @@
             this.Load += new System.EventHandler(this.DimensionalChangeForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,5 +191,7 @@
         private System.Windows.Forms.RadioButton radialRadioButton;
         private System.Windows.Forms.RadioButton tangentialradioButton;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

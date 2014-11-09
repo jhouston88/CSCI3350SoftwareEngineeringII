@@ -17,8 +17,10 @@ namespace WoodWorksApp
         public double CoefficientDimmensionChangeRadial { get; private set; }
         public double ElasticityGreen { get; private set; }
         public double Elasticity12Percent { get; private set; }
-        public double BeamShearFlat { get; private set; }
-        public double BeamShearEdge { get; private set; }
+        public double BeamShearFlat12Percent { get; private set; }
+        public double BeamShearEdge12Percent { get; private set; }
+        public double BeamShearFlatGreen { get; private set; }
+        public double BeamShearEdgeGreen { get; private set; }
         public Category Category { get; private set; }
 
         /// <summary>
@@ -33,13 +35,15 @@ namespace WoodWorksApp
         /// <param name="CoeffDimChgRadial">Coeefficient for dimensional change in the radial direction</param>
         /// <param name="ElastGreen">Elasticity green value</param>
         /// <param name="Elast12Pct">Elasticity at 12% moisture value</param>
-        /// <param name="BeamShearFlat">Flat beam shear value</param>
-        /// <param name="BeamShearEdge">Edge beam shear value</param>
+        /// <param name="BeamShearFlat12Percent">Flat beam shear value at 12 Elasticity</param>
+        /// <param name="BeamShearEdge12Percent">Edge beam shear value 12 Elasticity</param>
+        /// <param name="BeamShearFlatGreen">Edge beam shear value Green Elasticity</param>
+        /// <param name="BeamShearEdgeGreen">Edge beam shear value Green Elasticity</param>
         /// <param name="Category">The category in the database</param>
         public Wood(int TreeId, string TreeName, string Description, double SpGravityGreen,
                     double SpGravity12Pct, double CoeffDimChgTang, double CoeffDimChgRadial,
-                    double ElastGreen, double Elast12Pct, double BeamShearFlat, double BeamShearEdge,
-                    Category Category)
+                    double ElastGreen, double Elast12Pct, double BeamShearFlat12Percent, double BeamShearEdge12Percent,
+                    double BeamShearFlatGreen, double BeamShearEdgeGreen, Category Category)
         {
             this.TreeId = TreeId;
             this.TreeName = TreeName;
@@ -50,8 +54,10 @@ namespace WoodWorksApp
             this.CoefficientDimmensionChangeRadial = CoeffDimChgRadial;
             this.ElasticityGreen = ElastGreen;
             this.Elasticity12Percent = Elast12Pct;
-            this.BeamShearFlat = BeamShearFlat;
-            this.BeamShearEdge = BeamShearEdge;
+            this.BeamShearFlat12Percent = BeamShearFlat12Percent;
+            this.BeamShearEdge12Percent = BeamShearEdge12Percent;
+            this.BeamShearFlatGreen = BeamShearFlatGreen;
+            this.BeamShearEdgeGreen = BeamShearEdgeGreen;
             this.Category = Category;
         }
 
@@ -90,15 +96,19 @@ namespace WoodWorksApp
 			//Calculate beam shear
 			// beamShear/EL = BeamShearRatio
             double beamShear;
-			if (beamShearIsFlat)
-                beamShear = BeamShearFlat * elasticity;
+            if (beamShearIsFlat && elasticityIs12Pct)
+                beamShear = BeamShearFlat12Percent;
+            else if (beamShearIsFlat && !elasticityIs12Pct)
+                beamShear = BeamShearFlatGreen;
+            else if (elasticityIs12Pct && !beamShearIsFlat)
+                beamShear = BeamShearEdge12Percent;
             else
-                beamShear = BeamShearEdge * elasticity;
+                beamShear = BeamShearEdgeGreen;
 				
 			//Calculate beam deflection
 			// beamDeflection = ((( KB * W * L^3 ) / (E * I )) + (( KS * W * L) / ( G * A` )))
             return (((KB * beamLoad * Math.Pow(beamSpan, 3)) / (elasticity * inertia)) +
-					((KS * beamLoad * beamSpan)   / (beamShear / area)));
+					((KS * beamLoad * beamSpan)   / (beamShear * area)));
         }
 
         /// <summary>

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DensityAtMositureContent));
-            this.mLabel = new System.Windows.Forms.Label();
             this.valueM = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.equationPicture = new System.Windows.Forms.PictureBox();
@@ -39,19 +38,10 @@
             this.densityLabel = new System.Windows.Forms.Label();
             this.result = new System.Windows.Forms.TextBox();
             this.calculateButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.valueM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equationPicture)).BeginInit();
             this.SuspendLayout();
-            // 
-            // mLabel
-            // 
-            this.mLabel.AutoSize = true;
-            this.mLabel.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mLabel.Location = new System.Drawing.Point(102, 78);
-            this.mLabel.Name = "mLabel";
-            this.mLabel.Size = new System.Drawing.Size(11, 12);
-            this.mLabel.TabIndex = 0;
-            this.mLabel.Text = "M";
             // 
             // valueM
             // 
@@ -144,11 +134,21 @@
             this.calculateButton.UseVisualStyleBackColor = true;
             this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(48, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Moisture (M)";
+            // 
             // DensityAtMositureContent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(253, 333);
+            this.ClientSize = new System.Drawing.Size(625, 338);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.result);
             this.Controls.Add(this.densityLabel);
@@ -158,7 +158,6 @@
             this.Controls.Add(this.equationPicture);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.valueM);
-            this.Controls.Add(this.mLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -174,7 +173,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label mLabel;
         private System.Windows.Forms.NumericUpDown valueM;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox equationPicture;
@@ -184,5 +182,6 @@
         private System.Windows.Forms.Label densityLabel;
         private System.Windows.Forms.TextBox result;
         private System.Windows.Forms.Button calculateButton;
+        private System.Windows.Forms.Label label1;
     }
 }
