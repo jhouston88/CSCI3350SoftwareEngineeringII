@@ -128,7 +128,7 @@ namespace WoodWorksApp
             // no wood species selected yet
             if(Wood == null)
             {
-                MessageBox.Show("You must select a wood species before performing a calculation");
+                MessageBox.Show("You must select a wood species before performing a calculation", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             // no calculation selected

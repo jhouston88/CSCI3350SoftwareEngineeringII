@@ -271,7 +271,7 @@
             this.pictureBox2.Image = global::WoodWorksApp.Properties.Resources.beamDeflection;
             this.pictureBox2.Location = new System.Drawing.Point(256, 243);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(205, 70);
+            this.pictureBox2.Size = new System.Drawing.Size(209, 70);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;

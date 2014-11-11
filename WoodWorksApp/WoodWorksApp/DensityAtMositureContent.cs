@@ -32,5 +32,10 @@ namespace WoodWorksApp
             string gravity = moistureContent.Text;
             result.Text = wood.calculateDensityAtMositureContent(M, gravity).ToString();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

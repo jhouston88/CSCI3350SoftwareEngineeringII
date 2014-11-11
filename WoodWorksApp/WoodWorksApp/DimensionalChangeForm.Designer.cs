@@ -48,7 +48,7 @@
             // woodLabel
             // 
             this.woodLabel.AutoSize = true;
-            this.woodLabel.Location = new System.Drawing.Point(12, 9);
+            this.woodLabel.Location = new System.Drawing.Point(32, 28);
             this.woodLabel.Name = "woodLabel";
             this.woodLabel.Size = new System.Drawing.Size(59, 13);
             this.woodLabel.TabIndex = 0;
@@ -57,7 +57,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 36);
+            this.label1.Location = new System.Drawing.Point(32, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 1;
@@ -65,7 +65,7 @@
             // 
             // widthTextBox
             // 
-            this.widthTextBox.Location = new System.Drawing.Point(57, 36);
+            this.widthTextBox.Location = new System.Drawing.Point(77, 55);
             this.widthTextBox.Name = "widthTextBox";
             this.widthTextBox.Size = new System.Drawing.Size(100, 20);
             this.widthTextBox.TabIndex = 0;
@@ -74,15 +74,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 141);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(31, 212);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.Size = new System.Drawing.Size(43, 16);
             this.label2.TabIndex = 2;
-            this.label2.Text = "△D:";
+            this.label2.Text = "△D =";
             // 
             // resultTextBox
             // 
-            this.resultTextBox.Location = new System.Drawing.Point(59, 138);
+            this.resultTextBox.Location = new System.Drawing.Point(77, 209);
             this.resultTextBox.Name = "resultTextBox";
             this.resultTextBox.ReadOnly = true;
             this.resultTextBox.Size = new System.Drawing.Size(100, 20);
@@ -90,7 +91,7 @@
             // 
             // calculateButton
             // 
-            this.calculateButton.Location = new System.Drawing.Point(58, 162);
+            this.calculateButton.Location = new System.Drawing.Point(76, 233);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new System.Drawing.Size(75, 23);
             this.calculateButton.TabIndex = 4;
@@ -124,7 +125,7 @@
             // 
             this.groupBox1.Controls.Add(this.radialRadioButton);
             this.groupBox1.Controls.Add(this.tangentialradioButton);
-            this.groupBox1.Location = new System.Drawing.Point(16, 62);
+            this.groupBox1.Location = new System.Drawing.Point(36, 81);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(100, 70);
             this.groupBox1.TabIndex = 8;
@@ -134,7 +135,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WoodWorksApp.Properties.Resources.moistureChange;
-            this.pictureBox1.Location = new System.Drawing.Point(238, 36);
+            this.pictureBox1.Location = new System.Drawing.Point(35, 157);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(179, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -144,7 +145,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::WoodWorksApp.Properties.Resources.indendpDirctOfWood;
-            this.pictureBox2.Location = new System.Drawing.Point(238, 98);
+            this.pictureBox2.Location = new System.Drawing.Point(240, 28);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(343, 228);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -155,7 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 338);
+            this.ClientSize = new System.Drawing.Size(625, 301);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
@@ -169,7 +170,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "DimensionalChangeForm";
-            this.Text = "DimensionalChangeForm";
+            this.Text = "Dimensional Change";
             this.Load += new System.EventHandler(this.DimensionalChangeForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
