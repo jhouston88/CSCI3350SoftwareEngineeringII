@@ -48,13 +48,13 @@ namespace WoodWorksApp
             bool loadCheck = double.TryParse(beamLoadEntry.Text, out load);
 
             bool grainIsFlat;
-            if (grainType.SelectedItem.ToString() == "Flat")
+            if (radioFlat.Checked)
                 grainIsFlat = true;
             else
                 grainIsFlat = false;
 
             bool elasticityIs12percent;
-            if (moistureContent.SelectedItem.ToString() == "12%")
+            if (radioTwelvePct.Checked)
                 elasticityIs12percent = true;
             else
                 elasticityIs12percent = false;

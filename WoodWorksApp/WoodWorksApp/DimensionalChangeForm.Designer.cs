@@ -77,7 +77,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(31, 212);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 16);
+            this.label2.Size = new System.Drawing.Size(36, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "△D =";
             // 
@@ -118,6 +118,7 @@
             this.tangentialradioButton.Name = "tangentialradioButton";
             this.tangentialradioButton.Size = new System.Drawing.Size(75, 17);
             this.tangentialradioButton.TabIndex = 2;
+            this.tangentialradioButton.TabStop = true;
             this.tangentialradioButton.Text = "Tangential";
             this.tangentialradioButton.UseVisualStyleBackColor = true;
             // 
