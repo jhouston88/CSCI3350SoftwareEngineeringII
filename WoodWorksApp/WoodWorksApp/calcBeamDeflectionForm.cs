@@ -23,13 +23,13 @@ namespace WoodWorksApp
         private void calcBeamDeflectionForm_Load(object sender, EventArgs e)
         {
             woodName.Text = wood.TreeName + " " + wood.Category.CategoryName;
-    //        moistureContent.SelectedItem = moistureContent.Items[0];
-  //          grainType.SelectedItem = grainType.Items[0];
             beamWidthEntry.Text = "0";
             beamDepthEntry.Text = "0";
             beamSpanEntry.Text = "0";
             beamLoadEntry.Text = "0";
             resultDisplay.Text = "0";
+            radioFlat.Select();
+            radioTwelvePct.Select();
             
         }
 
