@@ -108,14 +108,14 @@
             this.result.Name = "result";
             this.result.ReadOnly = true;
             this.result.Size = new System.Drawing.Size(99, 21);
-            this.result.TabIndex = 2;
+            this.result.TabIndex = 3;
             // 
             // calculateButton
             // 
             this.calculateButton.Location = new System.Drawing.Point(100, 229);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new System.Drawing.Size(75, 23);
-            this.calculateButton.TabIndex = 3;
+            this.calculateButton.TabIndex = 4;
             this.calculateButton.Text = "Calculate";
             this.calculateButton.UseVisualStyleBackColor = true;
             this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
@@ -135,7 +135,7 @@
             this.GreenradioButton.Location = new System.Drawing.Point(11, 38);
             this.GreenradioButton.Name = "GreenradioButton";
             this.GreenradioButton.Size = new System.Drawing.Size(53, 16);
-            this.GreenradioButton.TabIndex = 24;
+            this.GreenradioButton.TabIndex = 2;
             this.GreenradioButton.Text = "Green";
             this.GreenradioButton.UseVisualStyleBackColor = true;
             // 
@@ -146,7 +146,7 @@
             this.TwelveradioButton.Location = new System.Drawing.Point(11, 16);
             this.TwelveradioButton.Name = "TwelveradioButton";
             this.TwelveradioButton.Size = new System.Drawing.Size(41, 16);
-            this.TwelveradioButton.TabIndex = 25;
+            this.TwelveradioButton.TabIndex = 1;
             this.TwelveradioButton.TabStop = true;
             this.TwelveradioButton.Text = "12%";
             this.TwelveradioButton.UseVisualStyleBackColor = true;
@@ -158,7 +158,7 @@
             this.groupBox1.Location = new System.Drawing.Point(24, 74);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(131, 62);
-            this.groupBox1.TabIndex = 26;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Moisture Content";
             // 
