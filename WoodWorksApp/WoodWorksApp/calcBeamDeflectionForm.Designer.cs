@@ -102,7 +102,7 @@
             this.beamWidthEntry.Location = new System.Drawing.Point(133, 146);
             this.beamWidthEntry.Name = "beamWidthEntry";
             this.beamWidthEntry.Size = new System.Drawing.Size(46, 20);
-            this.beamWidthEntry.TabIndex = 2;
+            this.beamWidthEntry.TabIndex = 4;
             this.beamWidthEntry.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // beamSpanEntry
@@ -110,7 +110,7 @@
             this.beamSpanEntry.Location = new System.Drawing.Point(133, 198);
             this.beamSpanEntry.Name = "beamSpanEntry";
             this.beamSpanEntry.Size = new System.Drawing.Size(46, 20);
-            this.beamSpanEntry.TabIndex = 4;
+            this.beamSpanEntry.TabIndex = 6;
             this.beamSpanEntry.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // beamDepthEntry
@@ -118,7 +118,7 @@
             this.beamDepthEntry.Location = new System.Drawing.Point(133, 172);
             this.beamDepthEntry.Name = "beamDepthEntry";
             this.beamDepthEntry.Size = new System.Drawing.Size(46, 20);
-            this.beamDepthEntry.TabIndex = 3;
+            this.beamDepthEntry.TabIndex = 5;
             this.beamDepthEntry.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // beamLoadEntry
@@ -126,7 +126,7 @@
             this.beamLoadEntry.Location = new System.Drawing.Point(133, 224);
             this.beamLoadEntry.Name = "beamLoadEntry";
             this.beamLoadEntry.Size = new System.Drawing.Size(46, 20);
-            this.beamLoadEntry.TabIndex = 5;
+            this.beamLoadEntry.TabIndex = 7;
             this.beamLoadEntry.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // resultDisplay
@@ -136,7 +136,7 @@
             this.resultDisplay.Name = "resultDisplay";
             this.resultDisplay.ReadOnly = true;
             this.resultDisplay.Size = new System.Drawing.Size(100, 20);
-            this.resultDisplay.TabIndex = 6;
+            this.resultDisplay.TabIndex = 8;
             this.resultDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // submitButton
@@ -144,7 +144,7 @@
             this.submitButton.Location = new System.Drawing.Point(104, 293);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(83, 20);
-            this.submitButton.TabIndex = 7;
+            this.submitButton.TabIndex = 9;
             this.submitButton.Text = "Calculate";
             this.submitButton.UseVisualStyleBackColor = true;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
@@ -252,7 +252,7 @@
             this.groupBox1.Location = new System.Drawing.Point(133, 47);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(101, 67);
-            this.groupBox1.TabIndex = 24;
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Moisture Content";
             // 
@@ -262,7 +262,7 @@
             this.radioGreen.Location = new System.Drawing.Point(6, 43);
             this.radioGreen.Name = "radioGreen";
             this.radioGreen.Size = new System.Drawing.Size(54, 17);
-            this.radioGreen.TabIndex = 1;
+            this.radioGreen.TabIndex = 3;
             this.radioGreen.Text = "Green";
             this.radioGreen.UseVisualStyleBackColor = true;
             // 
@@ -273,7 +273,8 @@
             this.radioTwelvePct.Location = new System.Drawing.Point(6, 19);
             this.radioTwelvePct.Name = "radioTwelvePct";
             this.radioTwelvePct.Size = new System.Drawing.Size(45, 17);
-            this.radioTwelvePct.TabIndex = 0;
+            this.radioTwelvePct.TabIndex = 2;
+            this.radioTwelvePct.TabStop = true;
             this.radioTwelvePct.Text = "12%";
             this.radioTwelvePct.UseVisualStyleBackColor = true;
             // 
@@ -284,7 +285,7 @@
             this.groupBox2.Location = new System.Drawing.Point(39, 47);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(88, 67);
-            this.groupBox2.TabIndex = 25;
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Grain Type";
             // 
@@ -306,6 +307,7 @@
             this.radioFlat.Name = "radioFlat";
             this.radioFlat.Size = new System.Drawing.Size(42, 17);
             this.radioFlat.TabIndex = 0;
+            this.radioFlat.TabStop = true;
             this.radioFlat.Text = "Flat";
             this.radioFlat.UseVisualStyleBackColor = true;
             // 

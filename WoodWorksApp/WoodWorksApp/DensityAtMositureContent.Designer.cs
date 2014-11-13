@@ -47,14 +47,14 @@
             // 
             // valueM
             // 
-            this.valueM.Location = new System.Drawing.Point(121, 47);
+            this.valueM.Location = new System.Drawing.Point(121, 51);
             this.valueM.Maximum = new decimal(new int[] {
             30,
             0,
             0,
             0});
             this.valueM.Name = "valueM";
-            this.valueM.Size = new System.Drawing.Size(44, 21);
+            this.valueM.Size = new System.Drawing.Size(44, 20);
             this.valueM.TabIndex = 0;
             this.valueM.Value = new decimal(new int[] {
             20,
@@ -66,7 +66,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(168, 46);
+            this.label2.Location = new System.Drawing.Point(168, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(23, 20);
             this.label2.TabIndex = 2;
@@ -76,9 +76,9 @@
             // equationPicture
             // 
             this.equationPicture.Image = global::WoodWorksApp.Properties.Resources.densityCalc;
-            this.equationPicture.Location = new System.Drawing.Point(32, 142);
+            this.equationPicture.Location = new System.Drawing.Point(32, 154);
             this.equationPicture.Name = "equationPicture";
-            this.equationPicture.Size = new System.Drawing.Size(211, 57);
+            this.equationPicture.Size = new System.Drawing.Size(211, 62);
             this.equationPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.equationPicture.TabIndex = 3;
             this.equationPicture.TabStop = false;
@@ -86,9 +86,9 @@
             // woodName
             // 
             this.woodName.AutoSize = true;
-            this.woodName.Location = new System.Drawing.Point(12, 9);
+            this.woodName.Location = new System.Drawing.Point(12, 10);
             this.woodName.Name = "woodName";
-            this.woodName.Size = new System.Drawing.Size(53, 12);
+            this.woodName.Size = new System.Drawing.Size(61, 13);
             this.woodName.TabIndex = 4;
             this.woodName.Text = "woodName";
             // 
@@ -96,7 +96,7 @@
             // 
             this.densityLabel.AutoSize = true;
             this.densityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.densityLabel.Location = new System.Drawing.Point(56, 206);
+            this.densityLabel.Location = new System.Drawing.Point(56, 223);
             this.densityLabel.Name = "densityLabel";
             this.densityLabel.Size = new System.Drawing.Size(26, 16);
             this.densityLabel.TabIndex = 21;
@@ -104,18 +104,18 @@
             // 
             // result
             // 
-            this.result.Location = new System.Drawing.Point(92, 205);
+            this.result.Location = new System.Drawing.Point(92, 222);
             this.result.Name = "result";
             this.result.ReadOnly = true;
-            this.result.Size = new System.Drawing.Size(99, 21);
-            this.result.TabIndex = 2;
+            this.result.Size = new System.Drawing.Size(99, 20);
+            this.result.TabIndex = 4;
             // 
             // calculateButton
             // 
-            this.calculateButton.Location = new System.Drawing.Point(100, 229);
+            this.calculateButton.Location = new System.Drawing.Point(100, 248);
             this.calculateButton.Name = "calculateButton";
-            this.calculateButton.Size = new System.Drawing.Size(75, 23);
-            this.calculateButton.TabIndex = 3;
+            this.calculateButton.Size = new System.Drawing.Size(75, 25);
+            this.calculateButton.TabIndex = 5;
             this.calculateButton.Text = "Calculate";
             this.calculateButton.UseVisualStyleBackColor = true;
             this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
@@ -123,19 +123,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 49);
+            this.label3.Location = new System.Drawing.Point(30, 53);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 12);
+            this.label3.Size = new System.Drawing.Size(50, 13);
             this.label3.TabIndex = 23;
             this.label3.Text = "Moisture:";
             // 
             // GreenradioButton
             // 
             this.GreenradioButton.AutoSize = true;
-            this.GreenradioButton.Location = new System.Drawing.Point(11, 38);
+            this.GreenradioButton.Location = new System.Drawing.Point(11, 41);
             this.GreenradioButton.Name = "GreenradioButton";
-            this.GreenradioButton.Size = new System.Drawing.Size(53, 16);
-            this.GreenradioButton.TabIndex = 24;
+            this.GreenradioButton.Size = new System.Drawing.Size(54, 17);
+            this.GreenradioButton.TabIndex = 3;
             this.GreenradioButton.Text = "Green";
             this.GreenradioButton.UseVisualStyleBackColor = true;
             // 
@@ -143,11 +143,10 @@
             // 
             this.TwelveradioButton.AutoSize = true;
             this.TwelveradioButton.Checked = true;
-            this.TwelveradioButton.Location = new System.Drawing.Point(11, 16);
+            this.TwelveradioButton.Location = new System.Drawing.Point(11, 17);
             this.TwelveradioButton.Name = "TwelveradioButton";
-            this.TwelveradioButton.Size = new System.Drawing.Size(41, 16);
-            this.TwelveradioButton.TabIndex = 25;
-            this.TwelveradioButton.TabStop = true;
+            this.TwelveradioButton.Size = new System.Drawing.Size(45, 17);
+            this.TwelveradioButton.TabIndex = 2;
             this.TwelveradioButton.Text = "12%";
             this.TwelveradioButton.UseVisualStyleBackColor = true;
             // 
@@ -155,18 +154,18 @@
             // 
             this.groupBox1.Controls.Add(this.TwelveradioButton);
             this.groupBox1.Controls.Add(this.GreenradioButton);
-            this.groupBox1.Location = new System.Drawing.Point(24, 74);
+            this.groupBox1.Location = new System.Drawing.Point(24, 80);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(131, 62);
-            this.groupBox1.TabIndex = 26;
+            this.groupBox1.Size = new System.Drawing.Size(131, 67);
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Moisture Content";
             // 
             // DensityAtMositureContent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(273, 282);
+            this.ClientSize = new System.Drawing.Size(273, 306);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.calculateButton);

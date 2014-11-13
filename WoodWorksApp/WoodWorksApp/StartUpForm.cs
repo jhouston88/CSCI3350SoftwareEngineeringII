@@ -181,5 +181,10 @@ namespace WoodWorksApp
         {
             Environment.Exit(0);
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
      }
 }
