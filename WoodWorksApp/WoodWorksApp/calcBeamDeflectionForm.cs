@@ -71,7 +71,7 @@ namespace WoodWorksApp
             if (resultDisplay.Text == "Infinity")
             {
                 MessageBox.Show("Wood type " + wood.TreeName + " has no beam shear for specified grain type and moisture content.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                resultDisplay.Text = "0";
+                resultDisplay.Text = String.Empty;
             }
         }
         
