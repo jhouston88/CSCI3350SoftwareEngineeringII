@@ -107,25 +107,19 @@
             this.result.Location = new System.Drawing.Point(92, 222);
             this.result.Name = "result";
             this.result.ReadOnly = true;
-<<<<<<< HEAD
             this.result.Size = new System.Drawing.Size(99, 20);
             this.result.TabIndex = 4;
-=======
             this.result.Size = new System.Drawing.Size(99, 21);
             this.result.TabIndex = 3;
->>>>>>> origin/master
             // 
             // calculateButton
             // 
             this.calculateButton.Location = new System.Drawing.Point(100, 248);
             this.calculateButton.Name = "calculateButton";
-<<<<<<< HEAD
             this.calculateButton.Size = new System.Drawing.Size(75, 25);
             this.calculateButton.TabIndex = 5;
-=======
             this.calculateButton.Size = new System.Drawing.Size(75, 23);
             this.calculateButton.TabIndex = 4;
->>>>>>> origin/master
             this.calculateButton.Text = "Calculate";
             this.calculateButton.UseVisualStyleBackColor = true;
             this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
@@ -144,13 +138,13 @@
             this.GreenradioButton.AutoSize = true;
             this.GreenradioButton.Location = new System.Drawing.Point(11, 41);
             this.GreenradioButton.Name = "GreenradioButton";
-<<<<<<< HEAD
+
             this.GreenradioButton.Size = new System.Drawing.Size(54, 17);
             this.GreenradioButton.TabIndex = 3;
-=======
+
             this.GreenradioButton.Size = new System.Drawing.Size(53, 16);
             this.GreenradioButton.TabIndex = 2;
->>>>>>> origin/master
+
             this.GreenradioButton.Text = "Green";
             this.GreenradioButton.UseVisualStyleBackColor = true;
             // 
@@ -160,14 +154,14 @@
             this.TwelveradioButton.Checked = true;
             this.TwelveradioButton.Location = new System.Drawing.Point(11, 17);
             this.TwelveradioButton.Name = "TwelveradioButton";
-<<<<<<< HEAD
+
             this.TwelveradioButton.Size = new System.Drawing.Size(45, 17);
             this.TwelveradioButton.TabIndex = 2;
-=======
+
             this.TwelveradioButton.Size = new System.Drawing.Size(41, 16);
             this.TwelveradioButton.TabIndex = 1;
             this.TwelveradioButton.TabStop = true;
->>>>>>> origin/master
+
             this.TwelveradioButton.Text = "12%";
             this.TwelveradioButton.UseVisualStyleBackColor = true;
             // 
@@ -177,11 +171,11 @@
             this.groupBox1.Controls.Add(this.GreenradioButton);
             this.groupBox1.Location = new System.Drawing.Point(24, 80);
             this.groupBox1.Name = "groupBox1";
-<<<<<<< HEAD
+
             this.groupBox1.Size = new System.Drawing.Size(131, 67);
-=======
+
             this.groupBox1.Size = new System.Drawing.Size(131, 62);
->>>>>>> origin/master
+
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Moisture Content";

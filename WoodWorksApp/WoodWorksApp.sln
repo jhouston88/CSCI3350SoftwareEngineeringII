@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WoodWorksApp", "WoodWorksApp\WoodWorksApp.csproj", "{4B671CAD-6D90-4B28-AED7-DEE04367530D}"
 EndProject
-Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "WoodWorksSetup", "WoodWorksSetup\WoodWorksSetup.isproj", "{ED756D1D-C2DB-4073-BC37-F685E07F26E5}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU
@@ -26,16 +24,6 @@ Global
 		{4B671CAD-6D90-4B28-AED7-DEE04367530D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4B671CAD-6D90-4B28-AED7-DEE04367530D}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
 		{4B671CAD-6D90-4B28-AED7-DEE04367530D}.SingleImage|Any CPU.Build.0 = Release|Any CPU
-		{ED756D1D-C2DB-4073-BC37-F685E07F26E5}.CD_ROM|Any CPU.ActiveCfg = CD_ROM
-		{ED756D1D-C2DB-4073-BC37-F685E07F26E5}.CD_ROM|Any CPU.Build.0 = CD_ROM
-		{ED756D1D-C2DB-4073-BC37-F685E07F26E5}.Debug|Any CPU.ActiveCfg = DVD-5
-		{ED756D1D-C2DB-4073-BC37-F685E07F26E5}.Debug|Any CPU.Build.0 = DVD-5
-		{ED756D1D-C2DB-4073-BC37-F685E07F26E5}.DVD-5|Any CPU.ActiveCfg = DVD-5
-		{ED756D1D-C2DB-4073-BC37-F685E07F26E5}.DVD-5|Any CPU.Build.0 = DVD-5
-		{ED756D1D-C2DB-4073-BC37-F685E07F26E5}.Release|Any CPU.ActiveCfg = SingleImage
-		{ED756D1D-C2DB-4073-BC37-F685E07F26E5}.Release|Any CPU.Build.0 = SingleImage
-		{ED756D1D-C2DB-4073-BC37-F685E07F26E5}.SingleImage|Any CPU.ActiveCfg = SingleImage
-		{ED756D1D-C2DB-4073-BC37-F685E07F26E5}.SingleImage|Any CPU.Build.0 = SingleImage
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
