@@ -64,8 +64,14 @@ namespace WoodWorksApp
                 resultDisplay.Text = wood.calculateBeamDeflection(width, depth, load, span, elasticityIs12percent, grainIsFlat).ToString();
             else
             {
-                MessageBox.Show("All entries must be positive numbers.");
+                MessageBox.Show("All entries must be positive numbers.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 resultDisplay.Text = String.Empty;
+            }
+
+            if (resultDisplay.Text == "Infinity")
+            {
+                MessageBox.Show("Wood type " + wood.TreeName + " has no beam shear for specified grain type and moisture content.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                resultDisplay.Text = "0";
             }
         }
         

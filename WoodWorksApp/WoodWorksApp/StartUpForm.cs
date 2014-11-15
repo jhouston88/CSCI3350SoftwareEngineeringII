@@ -93,7 +93,7 @@ namespace WoodWorksApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error getting the list o wood species for this category");
+                MessageBox.Show("Error getting the list of wood species for this category");
             }
 
         }
