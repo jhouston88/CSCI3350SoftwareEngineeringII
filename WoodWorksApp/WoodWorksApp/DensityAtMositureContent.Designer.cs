@@ -1,4 +1,19 @@
-﻿namespace WoodWorksApp
+﻿/**********************************************************************
+ * This class represents the database connection class.
+ * 
+ * It passes the connections string of the database,
+ * returns the categories, and returns the catagories 
+ * species. 
+ * 
+ * Authors: Josh Houston, Nick McMahon, Eric Blumenstock, 
+ * and Tianran Hao
+ * 
+ * Email: zjah82@goldmail.etsu.edu, mcmahonn@goldmail.etsu.edu,
+ * blumenstock@goldmail.etsu.edu, haot01@goldmail.etsu.edu
+ * 
+**********************************************************************/
+
+namespace WoodWorksApp
 {
     partial class DensityAtMositureContent
     {

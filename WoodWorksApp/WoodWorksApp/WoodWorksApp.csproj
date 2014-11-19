@@ -119,7 +119,6 @@
     <Compile Include="DensityAtMositureContent.Designer.cs">
       <DependentUpon>DensityAtMositureContent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Wood.cs" />
     <EmbeddedResource Include="calcBeamDeflectionForm.resx">

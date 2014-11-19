@@ -1,4 +1,19 @@
-﻿using System;
+﻿/**********************************************************************
+ * This class represents form to calculate beam deflection.
+ * 
+ * It reads the type of wood that is passed from the startup form, 
+ * initializes all of the fields in the form, and when the calculate
+ * button is clicked it sets the values with the desired fields.
+ * 
+ * Authors: Josh Houston, Nick McMahon, Eric Blumenstock, 
+ * and Tianran Hao
+ * 
+ * Email: zjah82@goldmail.etsu.edu, mcmahonn@goldmail.etsu.edu,
+ * blumenstock@goldmail.etsu.edu, haot01@goldmail.etsu.edu
+ * 
+**********************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

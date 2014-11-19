@@ -1,11 +1,42 @@
-﻿using System;
+﻿/**********************************************************************
+ * This class represents the database connection class.
+ * 
+ * It passes the connections string of the database,
+ * returns the categories, and returns the catagories 
+ * species. 
+ * 
+ * Authors: Josh Houston, Nick McMahon, Eric Blumenstock, 
+ * and Tianran Hao
+ * 
+ * Email: zjah82@goldmail.etsu.edu, mcmahonn@goldmail.etsu.edu,
+ * blumenstock@goldmail.etsu.edu, haot01@goldmail.etsu.edu
+ * 
+**********************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace WoodWorksApp
 {
+
+    static class Program
+    {
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new StartUpForm());
+        }
+    }
+
     public class Wood
     {
         public int TreeId {  get; private set; }

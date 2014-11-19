@@ -1,4 +1,22 @@
-﻿using System;
+﻿/**********************************************************************
+ * This class represents the form to calculate the density at the 
+ * specific moisture content.
+ * 
+ * It reads the type of woods passed through from the selected in 
+ * the start up form, displays the name of the selected wood, and 
+ * when the calculate button is clicked it calculates the density 
+ * based on the moisture content entered by passes the the argument 
+ * to the calculation class in the wood class. 
+ * 
+ * Authors: Josh Houston, Nick McMahon, Eric Blumenstock, 
+ * and Tianran Hao
+ * 
+ * Email: zjah82@goldmail.etsu.edu, mcmahonn@goldmail.etsu.edu,
+ * blumenstock@goldmail.etsu.edu, haot01@goldmail.etsu.edu
+ * 
+**********************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
