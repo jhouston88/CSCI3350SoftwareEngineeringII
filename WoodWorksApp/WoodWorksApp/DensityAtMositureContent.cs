@@ -48,7 +48,7 @@ namespace WoodWorksApp
             // Because we have set the limit of value of M, so do not need to determine the value of M here. 
             double M = (double)valueM.Value;
             string gravity = TwelveradioButton.Checked ? "12%" : "Green";
-            result.Text = wood.calculateDensityAtMositureContent(M, gravity).ToString();
+            result.Text = wood.calculateDensityAtMositureContent(M, gravity).ToString("#.###");
         }
 
         private void label2_Click(object sender, EventArgs e)

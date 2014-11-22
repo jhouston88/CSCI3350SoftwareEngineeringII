@@ -79,7 +79,7 @@ namespace WoodWorksApp
 
             //If all parsers returned true for no errors AND all variables are greater than zero ELSE display a message box
             if ((widthCheck && depthCheck && spanCheck && loadCheck) && (width > 0 && depth > 0 && load > 0 && span > 0))
-                resultDisplay.Text = wood.calculateBeamDeflection(width, depth, load, span, elasticityIs12percent, grainIsFlat).ToString("0.###");
+                resultDisplay.Text = wood.calculateBeamDeflection(width, depth, load, span, elasticityIs12percent, grainIsFlat).ToString("#.###");     
             else
             {
                 MessageBox.Show("All entries must be positive numbers.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

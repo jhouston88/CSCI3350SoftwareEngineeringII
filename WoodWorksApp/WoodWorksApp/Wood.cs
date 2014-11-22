@@ -104,9 +104,9 @@ namespace WoodWorksApp
         /// <returns>The change in dimension when moisture content changes from 0% to 100%</returns>
         public double calculateBeamDeflection(double beamWidth, double beamDepth, double beamLoad, double beamSpan, bool elasticityIs12Pct, bool beamShearIsFlat)
         {
-            //KB and KS constants
-			const double KB = 0.020833333333;	// 1/48
-			const double KS = 0.25;				// 1/4
+            //KB and KS constants 1/48 and 1/4
+            const double KB = 0.020833333333;
+			const double KS = 0.25;
 		
 			//Calculate beam moment of inertia
 			// I = (b * h^3) / 12
@@ -139,7 +139,8 @@ namespace WoodWorksApp
 			//Calculate beam deflection
 			// beamDeflection = ((( KB * W * L^3 ) / (E * I )) + (( KS * W * L) / ( G * A` )))
             return (((KB * beamLoad * Math.Pow(beamSpan, 3)) / (elasticity * inertia)) +
-					((KS * beamLoad * beamSpan)   / (beamShear * area)));
+				    ((KS * beamLoad * beamSpan)   / (beamShear * area)));
+            
         }
 
         /// <summary>
@@ -149,7 +150,7 @@ namespace WoodWorksApp
         /// <param name="wood">The Wood object to perform the calculations upon</param>
         /// <param name="width">The width of the wood</param>
         /// <param name="direction">Radial or tangential direction of the wood</param>
-        /// <returns>The change in dimension when moisture content changes from 0% to 100%</returns>
+        /// <returns>The change in dimension when moisture content changes from 10% to 35%</returns>
         public double calculateDimensionalChange(double width, Direction direction)
         {
             // Follows the formula deltaD = Di * (C * (Mf - Mi)) where deltaD is change in dimension,
@@ -157,10 +158,10 @@ namespace WoodWorksApp
             //      is determined by the direction, Mf is the final moisture content and Mi is the
             //      initial moisture content. 
 
-            const int finalMoistureContent = 100;                           // set to 100% as we want the full range
-            const int initialMoistureContent = 0;                           // set to 0% as we want the full range
-            double coefficientForDimensioalChange = this.CoefficientDimmensionChangeTangential;   // assume we're being passed a tangential direction
-            if (direction == Direction.RADIAL)                              // but if we're not, switch to coefficent for radial direction
+            const int finalMoistureContent = 35;
+            const int initialMoistureContent = 10;
+            double coefficientForDimensioalChange = this.CoefficientDimmensionChangeTangential;
+            if (direction == Direction.RADIAL)
                 coefficientForDimensioalChange = this.CoefficientDimmensionChangeRadial;
 
             // calculate deltaD and return deltaD (see formula in previous comment)
