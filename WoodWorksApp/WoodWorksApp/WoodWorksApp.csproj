@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Josh\Documents\GitHub\CSCI3350SoftwareEngineeringII\SetupFile\</PublishUrl>
+    <PublishUrl>C:\Users\Josh\Documents\GitHub\CSCI3350SoftwareEngineeringII\Setup File\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -22,9 +22,9 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ProductName>Wood Works App</ProductName>
-    <PublisherName>Wood Works</PublisherName>
-    <ApplicationRevision>7</ApplicationRevision>
+    <ProductName>Wood Works</ProductName>
+    <PublisherName>Wood Works Team</PublisherName>
+    <ApplicationRevision>9</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>

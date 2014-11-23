@@ -1,9 +1,8 @@
 ﻿/**********************************************************************
- * This class represents the database connection class.
+ * This class represents the wood class.
  * 
- * It passes the connections string of the database,
- * returns the categories, and returns the catagories 
- * species. 
+ * It performs all of the caluclations for the application and holds
+ * the properties of the wood. 
  * 
  * Authors: Josh Houston, Nick McMahon, Eric Blumenstock, 
  * and Tianran Hao

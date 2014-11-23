@@ -1,9 +1,14 @@
 ﻿/**********************************************************************
- * This class represents the database connection class.
+ * This class represents the start up form. 
  * 
- * It passes the connections string of the database,
- * returns the categories, and returns the catagories 
- * species. 
+ * When the application is launched this is the first form that loads.
+ * It querys the local database associated with it, and returns the 
+ * category values. Upon selection of the desired categroies the 
+ * wood species that belongs to that category appears. Upon selection
+ * of the desired wood species, the description of the wood is
+ * displayed. It also list the three calculations to perform on the 
+ * selected wood species. In order for the calculation to be performed
+ * a category and wood must be selected. 
  * 
  * Authors: Josh Houston, Nick McMahon, Eric Blumenstock, 
  * and Tianran Hao
@@ -44,14 +49,14 @@ namespace WoodWorksApp
             InitializeComponent();
             // associate the calculations listed in the combobox with the appropriate value so we can 
             // easily use them later to launch the forms.
-            Calculations = new String[3]; // this number will need to be changed if more calcuations are added
+            Calculations = new String[3]; 
             Calculations[(int)ComboBoxCalculations.BEAM_DEFLECTION] = "Beam Deflection";
             Calculations[(int)ComboBoxCalculations.DENSITY_AT_SPECIFIC_MOISTURE_CONTENT] = "Density at Specific Moisture Content";
             Calculations[(int)ComboBoxCalculations.MOISTURE_DRIVEN_DIMENSIONAL_CHANGE] = "Moisture Driven Dimensional Change";
 
             calculateComboBox.Items.AddRange(Calculations);
 
-            Wood = null; // Wood needs to initially be null so we can test to see if it's selected when we call for a calculation
+            Wood = null; 
         }
         
         /// <summary>
@@ -81,7 +86,7 @@ namespace WoodWorksApp
             catch(Exception ex)
             {
                 MessageBox.Show("Could not load categories.");
-                Environment.Exit(1);    // there's not point in continuing running if we have nothing to display.
+                Environment.Exit(1);
             }
         }
 
@@ -104,7 +109,7 @@ namespace WoodWorksApp
                 {
                     speciesListBox.Items.Add(wood.TreeName);
                 }
-                Wood = null; // clear out wood so we don't pass a non-selected wood to the calculations
+                Wood = null;
             }
             catch (Exception ex)
             {

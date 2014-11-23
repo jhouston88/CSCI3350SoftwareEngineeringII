@@ -1,9 +1,8 @@
 ﻿/**********************************************************************
- * This class represents the database connection class.
+ * This class represents the dimensional change form.
  * 
- * It passes the connections string of the database,
- * returns the categories, and returns the catagories 
- * species. 
+ * It excepts input values, passes it to the dimensional change 
+ * calculation and outputs the desired value.
  * 
  * Authors: Josh Houston, Nick McMahon, Eric Blumenstock, 
  * and Tianran Hao
@@ -49,7 +48,7 @@ namespace WoodWorksApp
             // make sure the user inputted a valid width.
             if (double.TryParse(widthTextBox.Text, out width) && width > 0)
             {
-                resultTextBox.Text = wood.calculateDimensionalChange(width, direction).ToString();
+                resultTextBox.Text = wood.calculateDimensionalChange(width, direction).ToString("0.###");
             }
             else
             {

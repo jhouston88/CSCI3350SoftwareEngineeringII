@@ -1,9 +1,7 @@
 ﻿/**********************************************************************
- * This class represents the database connection class.
+ * This class represents the category class
  * 
- * It passes the connections string of the database,
- * returns the categories, and returns the catagories 
- * species. 
+ * It represents the properties of the Categories belonging to itself. 
  * 
  * Authors: Josh Houston, Nick McMahon, Eric Blumenstock, 
  * and Tianran Hao

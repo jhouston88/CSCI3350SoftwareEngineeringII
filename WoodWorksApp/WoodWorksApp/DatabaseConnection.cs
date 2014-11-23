@@ -41,7 +41,7 @@ namespace WoodWorksApp
             {
                 SQLiteConnection sqliteCon = new SQLiteConnection(this.connectionString);
                 sqliteCon.Open();
-                string query = "SELECT * FROM Category;";               // gets all of needed category info from the database
+                string query = "SELECT * FROM Category;";
                 SQLiteCommand createCommand = new SQLiteCommand(query, sqliteCon);
                 SQLiteDataReader dr = createCommand.ExecuteReader();
 
