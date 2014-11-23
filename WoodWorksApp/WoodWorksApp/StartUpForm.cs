@@ -188,7 +188,7 @@ namespace WoodWorksApp
             ProcessStartInfo startInfo = new ProcessStartInfo();
             process.StartInfo = startInfo;
 
-            startInfo.FileName = @".\Read Me Document.pdf";
+            startInfo.FileName = @".\Woodworks Read.pdf";
             process.Start();
         }
 

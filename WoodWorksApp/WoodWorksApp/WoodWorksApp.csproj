@@ -155,7 +155,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Resources\Read Me Document.pdf" />
+    <None Include="Resources\Woodworks Read.pdf" />
     <None Include="woodAppDBrev5.sqlite" />
     <None Include="WoodWorksApp_TemporaryKey.pfx" />
   </ItemGroup>

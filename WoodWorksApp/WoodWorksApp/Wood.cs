@@ -114,7 +114,7 @@ namespace WoodWorksApp
 				
 			//Calculate the modified beam area
 			// A` = 5/6 * b * h				
-			double area = (5.0 / 6.0) * beamWidth * beamDepth;
+			double area = ( 5.0 / 6.0) * beamWidth * beamDepth;
 				
 			//Calculate elasticity
 			// E = ModulusOfElasticity
@@ -138,9 +138,9 @@ namespace WoodWorksApp
 				
 			//Calculate beam deflection
 			// beamDeflection = ((( KB * W * L^3 ) / (E * I )) + (( KS * W * L) / ( G * A` )))
-            return (((KB * beamLoad * Math.Pow(beamSpan, 3)) / (elasticity * inertia)) +
+            double beamDeflection =  (((KB * beamLoad * Math.Pow(beamSpan, 3)) / (elasticity * inertia)) +
 				    ((KS * beamLoad * beamSpan)   / (beamShear * area)));
-            
+            return beamDeflection;
         }
 
         /// <summary>
